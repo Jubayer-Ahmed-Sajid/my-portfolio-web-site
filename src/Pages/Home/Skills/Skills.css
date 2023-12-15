@@ -1,0 +1,8 @@
+.skills{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('https://i.ibb.co/vct0Dvq/wave-haikei-2.png') center/cover no-repeat; /* Set your background image path */
+    color: #fff; /* Set text color */
+    text-align: center;
+}

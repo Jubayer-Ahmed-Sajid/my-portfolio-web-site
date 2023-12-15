@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('https://i.ibb.co/4Sx99CD/2175137.jpg') center/cover no-repeat; /* Set your background image path */
+    color: #fff; /* Set text color */
+    text-align: center;
+}
+
+/* Add an overlay using pseudo-element (::before) */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 175, 152, 0.8); /* Adjust the overlay color and opacity */
+}
+
+/* Additional styling for your content */
+
