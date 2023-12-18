@@ -1,8 +1,8 @@
 
 const About = () => {
     return (
-        <div>
-            <div className="hero min-h-screen bg-base-200">
+        <div className="bg-black text-white">
+            <div className="hero min-h-screen bg-black">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <img src="https://i.ibb.co/prfhFj0/b770f06c-2146-491c-8c0a-c34cb5a0a869-removebg-preview-1.png" className="max-w-sm rounded-lg shadow-2xl" />
     <div>
