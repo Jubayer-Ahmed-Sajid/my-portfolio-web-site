@@ -4,7 +4,7 @@ import { TypeAnimation } from 'react-type-animation';
 const Banner = () => {
     return (
         <div className="hero mb-0 flex justify-center banner  text-white ">
-            <div className="hero-content  justify-center items-center mb-0">
+            <div className="hero-content   justify-center items-center mb-0">
                 <div className="ml-6">
                     <h1 className="text-2xl lg:text-5xl text-center mb-2 font-bold">Hello, <br /> I am Jobayer Ahmed Sajid!</h1>
                     <TypeAnimation
