@@ -12,7 +12,7 @@ const MyWorks = () => {
             <div>
                 <div className='min-h-80 '>
                     <div className='lg:flex flex-row-reverse  justify-center items-center gap-12'>
-                        <div className=' w-1/2 '>
+                        <div className=' lg:w-1/2 '>
 
                             <Swiper
 
@@ -63,7 +63,7 @@ const MyWorks = () => {
                 <div className='mt-8'>
 
                     <div className='lg:flex justify-center items-center gap-12'>
-                        <div className='w-1/2'>
+                        <div className='lg:w-1/2'>
 
                             <Swiper
                                 slidesPerView={2}
