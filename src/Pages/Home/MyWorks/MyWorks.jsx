@@ -62,6 +62,8 @@ const MyWorks = () => {
                     </div>
                     <div className='flex justify-center my-4'>
                         <Link to='https://assignment-11-3e9b0.web.app/' className='btn btn-secondary '>Live Preview</Link>
+                        <Link to='https://assignment-11-3e9b0.web.app/' className='btn btn-secondary '>Client Repo</Link>
+                        <Link to='https://assignment-11-3e9b0.web.app/' className='btn btn-secondary '>Server Repo</Link>
                     </div>
                 </div>
 

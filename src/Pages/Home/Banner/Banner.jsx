@@ -10,7 +10,7 @@ const Banner = () => {
         })
     },[])
     const downloadResume = () => {
-        const pdfUrl = "../../../../public/resume_001.pdf";
+        const pdfUrl = "resume_001.pdf";
         const link = document.createElement("a");
         link.href = pdfUrl;
         link.download = "resume_001.pdf"; // Corrected: Provide the desired name without the dot (.)
