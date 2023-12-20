@@ -11,7 +11,7 @@ const Skills = () => {
     return (
         <div id='skills' className="skills" >
 
-            <h2 className=' text-4xl text-center  lg:mt-20 py-8 ' data-aos='fade-left'>Skills</h2>
+            <h2 className=' text-4xl text-center   py-8 ' data-aos='fade-left'>Skills</h2>
             <div className='grid grid-cols-3 lg:gap-12 gap-4 justify-center items-center  mx-auto  mt-32'>
                 <div className='item' data-aos='zoom-in'>
                     <img src="https://i.ibb.co/Xp0vCQd/kisspng-react-logo-javascript-front-and-back-ends-user-int-5afef575c096e1-8015139215266584217889.png" alt="" className='h-8 lg:h-20 mx-auto object-cover' />
