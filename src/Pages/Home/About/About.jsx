@@ -19,7 +19,7 @@ const About = () => {
             <div>  
 
             <h1 className="text-3xl text-center before:lg:text-5xl font-bold text-[#06af98c0]">Who am I ?</h1>
-            <p className="py-6 w-3/4 mx-auto">Hello there, I am Jobayer Ahmed Sajid an aspiring junior MERN stack web developer. I am from Dhaka,Bangladesh. I am pursuing my bachelors degree in Chinese Language and culture. Though I am a Chinese Language student I choose to be a web developer because it's my passion. I am ready to turn your expectation in to visual representation. Connect me for you web solution. I am ready with great excitement to contribute to your project</p>
+            <p className="py-6 w-3/4 mx-auto">Hello there, I am Jobayer Ahmed Sajid an aspiring junior MERN stack web developer. I am from Dhaka,Bangladesh. I am pursuing my bachelors degree in Chinese Language and culture. Though I am a Chinese Language student I choose to be a web developer because it is my passion. I am ready to turn your expectation in to visual representation. Connect me for you web solution. I am ready with great excitement to contribute to your project</p>
             
             </div>
           </div>

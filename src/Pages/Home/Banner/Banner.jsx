@@ -9,6 +9,16 @@ const Banner = () => {
             duration: 1500,
         })
     },[])
+    const downloadResume = () => {
+        const pdfUrl = "../../../../public/resume_001.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = "resume_001.pdf"; // Corrected: Provide the desired name without the dot (.)
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+    
     return (
         <div className="hero mb-0 flex justify-center banner  text-white ">
             <div className="hero-content   justify-center items-center mb-0">
@@ -31,7 +41,7 @@ const Banner = () => {
                         repeat={Infinity}
                     />
                     <br />
-                    <button className="btn font-semibold mt-2 btn-primary"> <FaDownload></FaDownload>Download Resume</button>
+                    <button onClick={downloadResume} className="btn font-semibold mt-2 btn-primary"> <FaDownload></FaDownload>Download Resume</button>
                 </div>
             </div>
         </div>
