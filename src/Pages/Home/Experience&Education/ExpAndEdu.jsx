@@ -1,10 +1,17 @@
+import Aos from "aos";
+import { useEffect } from "react";
 import { FaBuromobelexperte, FaGraduationCap } from "react-icons/fa";
 const ExpAndEdu = () => {
+    useEffect(()=>{
+        Aos.init({
+            duration:1800
+        })
+    },[])
     return (
         <div className="bg-black py-12 px-8">
-            <h2 className="text-white text-3xl font-bold text-center">Education and <span className="text-[#058472]">Experience</span> </h2>
+            <h2 className="text-white text-3xl font-bold text-center" data-aos='fade-up'>Education and <span className="text-[#058472]">Experience</span> </h2>
             <div className=" lg:grid w-full gap-12 grid-cols-2">
-                <div className="w-full">
+                <div className="w-full" data-aos='fade-left'>
                     <div className="my-12 flex items-center gap-2 justify-center">
 
                         <h2 className="text-2xl text-white font-semibold"> Education </h2>
@@ -48,7 +55,7 @@ const ExpAndEdu = () => {
                 </div>
 
 
-                <div className="w-full">
+                <div className="w-full" data-aos='fade-right'>
                     <div className="my-12 flex items-center gap-2 justify-center">
                         <h2 className="text-white text-2xl text-semibold">Experience</h2>
                         <p className="text-4xl  text-[#058472]">< FaBuromobelexperte></FaBuromobelexperte> </p>

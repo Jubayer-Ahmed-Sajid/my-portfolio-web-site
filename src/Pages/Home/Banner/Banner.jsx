@@ -1,12 +1,19 @@
 import { FaDownload } from 'react-icons/fa';
 import './banner.css'
 import { TypeAnimation } from 'react-type-animation';
+import { useEffect } from 'react';
+import Aos from 'aos';
 const Banner = () => {
+    useEffect(()=>{
+        Aos.init({
+            duration: 1500,
+        })
+    },[])
     return (
         <div className="hero mb-0 flex justify-center banner  text-white ">
             <div className="hero-content   justify-center items-center mb-0">
                 <div className="ml-6">
-                    <h1 className="text-2xl lg:text-5xl text-center mb-2 font-bold">Hello, <br /> I am Jobayer Ahmed Sajid!</h1>
+                    <h1 className="text-2xl lg:text-5xl text-center mb-2 font-bold" data-aos='zoom-in'>Hello, <br /> I am Jobayer Ahmed Sajid!</h1>
                     <TypeAnimation
                         sequence={[
                             'Unleashing Digital Excellence.',
