@@ -20,7 +20,7 @@ const Contact = () => {
             });
     };
     return (
-        <div  className='bg-black py-8 text-white'>
+        <div id='contacts' className='bg-black py-8 text-white'>
             <h2 className="mb-8 text-3xl text-center" data-aos='fade-left'>
                 Contact 
             </h2>

@@ -14,7 +14,7 @@ const MyWorks = () => {
         })
     },[])
     return (
-        <div className='bg-black p-8'>
+        <div id='myWorks' className='bg-black p-8'>
             <h2 className="text-4xl font-bold text-center my-8 text-[#058472]" data-aos='fade-in'>My Works</h2>
             <div >
                 <div className='min-h-80 '>

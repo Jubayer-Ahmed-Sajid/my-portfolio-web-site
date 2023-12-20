@@ -8,7 +8,7 @@ const ExpAndEdu = () => {
         })
     },[])
     return (
-        <div className="bg-black py-12 px-8">
+        <div id="education" className="bg-black py-12 px-8">
             <h2 className="text-white text-3xl font-bold text-center" data-aos='fade-up'>Education and <span className="text-[#058472]">Experience</span> </h2>
             <div className=" lg:grid w-full gap-12 grid-cols-2">
                 <div className="w-full" data-aos='fade-left'>

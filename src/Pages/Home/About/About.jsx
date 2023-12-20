@@ -8,7 +8,7 @@ const About = () => {
     });
   }, [])
   return (
-    <div className="bg-black text-white">
+    <div id='about' className="bg-black text-white">
       <div className="hero min-h-screen bg-black">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="item" data-aos="fade-left">
