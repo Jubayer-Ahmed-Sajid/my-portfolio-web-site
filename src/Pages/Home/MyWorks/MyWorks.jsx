@@ -60,7 +60,7 @@ const MyWorks = () => {
 
                         </div>
                     </div>
-                    <div className='lg:flex gap-8 justify-center my-4'>
+                    <div className='lg:flex gap-8 space-y-2 justify-center my-4'>
                         <Link to='https://assignment-11-3e9b0.web.app' className='btn btn-secondary '>Live Preview</Link>
                         <Link to='https://github.com/Jubayer-Ahmed-Sajid/Library-management-client-site' className='btn btn-secondary '>Client Repo</Link>
                         <Link to='https://github.com/Jubayer-Ahmed-Sajid/Library-management-server-site' className='btn btn-secondary '>Server Repo</Link>
@@ -119,10 +119,10 @@ const MyWorks = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='flex justify-center my-4'>
+                    <div className='lg:flex gap-8 space-y-2 justify-center my-4'>
                         <Link to='https://pet-adaption-11a4b.web.app' className='btn btn-secondary '>Live Preview</Link>
-                        <Link to='https://github.com/Jubayer-Ahmed-Sajid/Pet-adoption-client-site' className='btn btn-secondary '>Live Preview</Link>
-                        <Link to='' className='btn btn-secondary '>Live Preview</Link>
+                        <Link to='https://github.com/Jubayer-Ahmed-Sajid/Pet-adoption-client-site' className='btn btn-secondary '>Client Repo</Link>
+                        <Link to='https://github.com/Jubayer-Ahmed-Sajid/Pet-adoption-server-site' className='btn btn-secondary '>Server Repo</Link>
                     </div>
 
                 </div>
