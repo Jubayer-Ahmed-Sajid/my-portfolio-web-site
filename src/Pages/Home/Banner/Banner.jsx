@@ -41,7 +41,7 @@ const Banner = () => {
                         repeat={Infinity}
                     />
                     <br />
-                    <button onClick={downloadResume} className="btn font-semibold mt-2 btn-primary"> <FaDownload></FaDownload>Download Resume</button>
+                    <button onClick={downloadResume} className="btn font-semibold mt-2 btn-secondary"> <FaDownload></FaDownload>Download Resume</button>
                 </div>
             </div>
         </div>

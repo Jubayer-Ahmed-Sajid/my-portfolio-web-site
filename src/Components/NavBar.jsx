@@ -30,7 +30,7 @@ const NavBar = () => {
                         {navLink}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Jobayer Ahmed Sajid</a>
+                <img src="/public/profile.png" className="h-24" alt="" />
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal flex justify-between gap-8">

@@ -29,15 +29,15 @@ const Contact = () => {
             <form className='' ref={form} onSubmit={sendEmail}>
                 <label>Name</label>
                 <br />
-                <input type="text" name="user_name" placeholder="Type your Name " className="input mb-2 input-bordered input-accent w-full" />
+                <input type="text" name="user_name" placeholder="Type your Name " className="text-slate-400 input mb-2 input-bordered input-accent w-full" />
                 <br />
                 <label>Email</label>
                 <br />
-                <input type="email" name="user_email"placeholder='Enter your Email' className="input mb-2  input-bordered input-accent w-full" />
+                <input type="email" name="user_email"placeholder='Enter your Email' className="input mb-2 text-slate-400 input-bordered input-accent w-full" />
                 <br />
                 <label>Message</label>
                 <br />
-                <textarea name="message" placeholder='Enter your Message' className="textarea mb-2  border-accent  w-full"/>
+                <textarea name="message" placeholder='Enter your Message' className="textarea mb-2 text-slate-400 border-accent  w-full"/>
                 <br />
                 <input className='btn btn-secondary px-8 w-full' type="submit" value="Send" />
             </form>
