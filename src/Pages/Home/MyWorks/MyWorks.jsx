@@ -8,11 +8,11 @@ import { useEffect } from 'react';
 import Aos from 'aos';
 // import './Slider.css'
 const MyWorks = () => {
-    useEffect(()=>{
+    useEffect(() => {
         Aos.init({
-            duration:1800,
+            duration: 1800,
         })
-    },[])
+    }, [])
     return (
         <div id='myWorks' className='bg-black p-8'>
             <h2 className="text-4xl font-bold text-center my-8 text-[#058472]" data-aos='fade-in'>My Works</h2>
@@ -60,10 +60,19 @@ const MyWorks = () => {
 
                         </div>
                     </div>
-                    <div className='lg:flex gap-8 space-y-2 justify-center my-4'>
-                        <Link to='https://assignment-11-3e9b0.web.app' className='btn btn-secondary '>Live Preview</Link>
-                        <Link to='https://github.com/Jubayer-Ahmed-Sajid/Library-management-client-site' className='btn btn-secondary '>Client Repo</Link>
-                        <Link to='https://github.com/Jubayer-Ahmed-Sajid/Library-management-server-site' className='btn btn-secondary '>Server Repo</Link>
+                    <div className='md:w-1/2 mx-auto grid grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-4 items-center space-y-1 justify-center my-4'>
+                    <div>
+
+                            <Link to='https://github.com/Jubayer-Ahmed-Sajid/Library-management-client-site' className='btn w-full   btn-secondary '>Client Repo</Link>
+                        </div>
+                        <div>
+                            <Link to='https://github.com/Jubayer-Ahmed-Sajid/Library-management-server-site' className='btn w-full btn-secondary '>Server Repo</Link>
+
+                        </div>
+                        <div className='lg:col-span-1 col-span-2'>
+
+                            <Link to='https://assignment-11-3e9b0.web.app' className='btn lg:bg-secondary  bg-[#058472] border-none w-full  btn-secondary '>Live Preview</Link>
+                        </div>
                     </div>
                 </div>
 
@@ -119,10 +128,20 @@ const MyWorks = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='lg:flex gap-8 space-y-2 justify-center my-4'>
-                        <Link to='https://pet-adaption-11a4b.web.app' className='btn btn-secondary '>Live Preview</Link>
-                        <Link to='https://github.com/Jubayer-Ahmed-Sajid/Pet-adoption-client-site' className='btn btn-secondary '>Client Repo</Link>
-                        <Link to='https://github.com/Jubayer-Ahmed-Sajid/Pet-adoption-server-site' className='btn btn-secondary '>Server Repo</Link>
+                    <div className='grid md:w-1/2 mx-auto grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-4 items-center space-y-1 justify-center my-4'>
+
+                   
+                        <div>
+                             <Link to='https://github.com/Jubayer-Ahmed-Sajid/Pet-adoption-client-site' className='btn w-full btn-secondary '>Client Repo</Link>
+                        </div>
+                        <div>
+                         <Link to='https://github.com/Jubayer-Ahmed-Sajid/Pet-adoption-server-site' className='btn w-full btn-secondary '>Server Repo</Link>
+                        
+                        </div>
+                       
+                        <div className='lg:col-span-1 col-span-2'>
+                            <Link to='https://pet-adaption-11a4b.web.app' className='btn w-full lg:bg-secondary bg-[#058472] border-none  btn-secondary '>Live Preview</Link>
+                        </div>
                     </div>
 
                 </div>
