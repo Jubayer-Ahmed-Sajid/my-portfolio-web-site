@@ -1,14 +1,14 @@
-import  { useState } from "react";
+import { useState } from "react";
 import book_1 from "../assets/book_1.png";
 import book_2 from "../assets/book_2.png";
 import book_3 from "../assets/book_3.png";
 import book_4 from "../assets/book_4.png";
 import book_5 from "../assets/book_5.png";
-import daisy from '../assets/daisyui-seeklogo.png'
-import reactQ from '../assets/react-query-seeklogo.png'
-import reactR from '../assets/react-router-seeklogo.svg'
-import github from '../assets/github-logo.png'
-import tailwind from '../assets/tailwind-css-seeklogo.png'
+import daisy from "../assets/daisyui-seeklogo.png";
+import reactQ from "../assets/react-query-seeklogo.png";
+import reactR from "../assets/react-router-seeklogo.svg";
+import github from "../assets/github-logo.png";
+import tailwind from "../assets/tailwind-css-seeklogo.png";
 const Book_Shop = ({
   motion,
   Swiper,
@@ -59,47 +59,51 @@ const Book_Shop = ({
               <img src={book_5} alt="" />
             </SwiperSlide>
           </Swiper>
-         <div className="space-y-4">
-                     <p className="my-3">
-                       <span className="text-lg font-semibold">Books Corner</span>{" "}
-                       (Book Buy Selling Web App)
-                     </p>
-                     <p className="text-slate-600 text-xl">Primary technology</p>
-                     <div className="grid grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8">
-                       <img
-                         src="https://i.ibb.co/Xp0vCQd/kisspng-react-logo-javascript-front-and-back-ends-user-int-5afef575c096e1-8015139215266584217889.png"
-                         className="h-8 object-cover"
-                         alt=""
-                       />
-                       <img
-                         src="https://i.ibb.co/q9FWKFT/pngfind-com-pc-master-race-png-1363736.png"
-                         className="h-8 object-cover"
-                         alt=""
-                       />
-                       <img
-                         src="https://i.ibb.co/G2rsZZb/pngwing-com-2.png"
-                         className="h-8 object-cover"
-                         alt=""
-                       />
-                       <img
-                         src="https://i.ibb.co/9cpxRJ2/pngwing-com-3.png"
-                         className="h-8 object-cover"
-                         alt=""
-                       />
-                       <img
-                         src="https://i.ibb.co/VL2f0CW/pngwing-com-1.png"
-                         className="h-8 object-cover"
-                         alt=""
-                       />
-                      
-                       <img src="https://i.ibb.co.com/fYCrkX9/jwt-seeklogo.png" className="h-8 object-cover" alt="" />
-                       <img src={reactQ} className="h-8 object-cover" alt="" />
-                       <img src={reactR} className="h-8 object-cover" alt="" />
-                       <img src={tailwind} className="h-8 object-cover" alt="" />
-                       <img src={daisy} className="h-8 object-cover" alt="" />
-                       <img src={github} className="h-8 object-cover" alt="" />
-                     </div>
-                   </div>
+          <div className="space-y-4">
+            <p className="my-3">
+              <span className="text-lg font-semibold">Books Corner</span> (Book
+              Buy Selling Web App)
+            </p>
+            <p className="text-slate-600 text-xl">Primary technology</p>
+            <div className="grid grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8">
+              <img
+                src="https://i.ibb.co/Xp0vCQd/kisspng-react-logo-javascript-front-and-back-ends-user-int-5afef575c096e1-8015139215266584217889.png"
+                className="h-8 object-cover"
+                alt=""
+              />
+              <img
+                src="https://i.ibb.co/q9FWKFT/pngfind-com-pc-master-race-png-1363736.png"
+                className="h-8 object-cover"
+                alt=""
+              />
+              <img
+                src="https://i.ibb.co/G2rsZZb/pngwing-com-2.png"
+                className="h-8 object-cover"
+                alt=""
+              />
+              <img
+                src="https://i.ibb.co/9cpxRJ2/pngwing-com-3.png"
+                className="h-8 object-cover"
+                alt=""
+              />
+              <img
+                src="https://i.ibb.co/VL2f0CW/pngwing-com-1.png"
+                className="h-8 object-cover"
+                alt=""
+              />
+
+              <img
+                src="https://i.ibb.co.com/fYCrkX9/jwt-seeklogo.png"
+                className="h-8 object-cover"
+                alt=""
+              />
+              <img src={reactQ} className="h-8 object-cover" alt="" />
+              <img src={reactR} className="h-8 object-cover" alt="" />
+              <img src={tailwind} className="h-8 object-cover" alt="" />
+              <img src={daisy} className="h-8 object-cover" alt="" />
+              <img src={github} className="h-8 object-cover" alt="" />
+            </div>
+          </div>
         </motion.div>
         {isOpen && (
           <motion.div className="lg:col-span-2">
@@ -137,10 +141,25 @@ const Book_Shop = ({
               </li>
             </ul>
 
-            <div className="flex flex-col lg:flex-row gap-4 w-full justify-around items-center my-4">
-              <a href="https://github.com/Jubayer-Ahmed-Sajid/my-book-shop-client-side" className="btn bg-secondary">Client Site</a>
-              <a href="https://github.com/Jubayer-Ahmed-Sajid/my-book-shop-server-side" className="btn bg-secondary">Server site</a>
-              <a href="https://book-shop-jp-project.vercel.app/" className="btn bg-secondary">Live site</a>
+            <div className=" flex-col lg:flex-row gap-4 w-full justify-around items-center my-4">
+              <a
+                href="https://github.com/Jubayer-Ahmed-Sajid/my-book-shop-client-side"
+                className="btn w-auto lg:w-full border-none text-gray-900 bg-secondary"
+              >
+                Client Site
+              </a>
+              <a
+                href="https://github.com/Jubayer-Ahmed-Sajid/my-book-shop-server-side"
+                className="btn w-auto lg:w-full border-none text-gray-900 bg-secondary"
+              >
+                Server site
+              </a>
+              <a
+                href="https://book-shop-jp-project.vercel.app/"
+                className="btn w-auto lg:w-full text-gray-900 border-none bg-secondary"
+              >
+                Live site
+              </a>
             </div>
           </motion.div>
         )}

@@ -157,22 +157,22 @@ const Fitness_studio = ({
               </li>
             </ul>
 
-            <div className="flex w-full justify-around items-center my-4">
+            <div className="flex-col lg:flex-row gap-4 w-full justify-around items-center my-4">
               <a
                 href="https://github.com/Jubayer-Ahmed-Sajid/Fitness-Studio-client-side.git"
-                className="btn bg-secondary"
+                className="btn border-none w-auto lg:w-full text-gray-900 bg-secondary"
               >
                 Client Site
               </a>
               <a
                 href="https://github.com/Jubayer-Ahmed-Sajid/Fitness-Studio-server-site.git"
-                className="btn bg-secondary"
+                className="btn w-auto lg:w-full border-none text-gray-900 bg-secondary"
               >
                 Server site
               </a>
               <a
                 href="https://fitness-studio.surge.sh/"
-                className="btn bg-secondary"
+                className="btn border-none w-auto lg:w-full text-gray-900 bg-secondary"
               >
                 Live site
               </a>

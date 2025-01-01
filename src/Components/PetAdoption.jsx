@@ -155,22 +155,22 @@ const PetAdoption = ({
               </li>
             </ul>
 
-            <div className="flex w-full justify-around items-center my-4">
+            <div className="flex-col lg:flex-row gap-4 w-full justify-around items-center my-4">
               <a
                 href="https://github.com/Jubayer-Ahmed-Sajid/Pet-adoption-client-site"
-                className="btn bg-secondary"
+                className="btn w-auto lg:w-full border-none text-gray-900 bg-secondary"
               >
                 Client Site
               </a>
               <a
                 href="https://github.com/Jubayer-Ahmed-Sajid/Pet-adoption-server-site"
-                className="btn bg-secondary"
+                className="btn w-auto lg:w-full border-none text-gray-900 bg-secondary"
               >
                 Server site
               </a>
               <a
                 href="https://paws-and-hearts-js.vercel.app"
-                className="btn bg-secondary"
+                className="btn w-auto lg:w-full border-none text-gray-900 bg-secondary"
               >
                 Live site
               </a>
