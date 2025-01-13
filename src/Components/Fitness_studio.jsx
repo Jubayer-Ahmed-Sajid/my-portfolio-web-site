@@ -78,44 +78,70 @@ const Fitness_studio = ({
             </p>
             <p className="text-slate-600 text-xl">Primary technology</p>
             <div className="grid grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-4">
-              <img
-                src="https://i.ibb.co/Xp0vCQd/kisspng-react-logo-javascript-front-and-back-ends-user-int-5afef575c096e1-8015139215266584217889.png"
-                className="h-8 object-cover"
-                alt=""
-              />
-              <img
-                src="https://i.ibb.co/q9FWKFT/pngfind-com-pc-master-race-png-1363736.png"
-                className="h-8 object-cover"
-                alt=""
-              />
-              <img
-                src="https://i.ibb.co/G2rsZZb/pngwing-com-2.png"
-                className="h-8 object-cover"
-                alt=""
-              />
-              <img
-                src="https://i.ibb.co/9cpxRJ2/pngwing-com-3.png"
-                className="h-8 object-cover"
-                alt=""
-              />
-              <img
-                src="https://i.ibb.co/VL2f0CW/pngwing-com-1.png"
-                className="h-8 object-cover"
-                alt=""
-              />
+              <div className="bg-white p-2 rounded-md shadow-lg flex flex-col items-center justify-center">
+                <img
+                  src="https://i.ibb.co/Xp0vCQd/kisspng-react-logo-javascript-front-and-back-ends-user-int-5afef575c096e1-8015139215266584217889.png"
+                  className="h-5 object-cover"
+                  alt=""
+                />
+                <p className="mt-1 text-sm">React</p>
+              </div>
+              <div className="bg-white p-2 rounded-md shadow-lg flex flex-col items-center justify-center">
+                <img
+                  src="https://i.ibb.co/q9FWKFT/pngfind-com-pc-master-race-png-1363736.png"
+                  className="h-5 object-cover"
+                  alt=""
+                />
+                <p className="text-sm mt-1">Express</p>
+              </div>
 
-              <img
-                src="https://i.ibb.co.com/fYCrkX9/jwt-seeklogo.png"
-                className="h-8 object-cover"
-                alt=""
-              />
-              <img src={reactQ} className="h-8 object-cover" alt="" />
-              <img src={reactR} className="h-8 object-cover" alt="" />
-              <img src={tailwind} className="h-8 object-cover" alt="" />
-              <img src={github} className="h-8 object-cover" alt="" />
+              <div className="bg-white p-2 rounded-md shadow-lg flex flex-col items-center justify-center">
+                <img
+                  src="https://i.ibb.co/G2rsZZb/pngwing-com-2.png"
+                  className="h-5 object-cover"
+                  alt=""
+                />
+                <p className="text-sm mt-1">Node</p>
+              </div>
+
+              <div className="bg-white p-2 rounded-md shadow-lg flex flex-col items-center justify-center">
+                <img
+                  src="https://i.ibb.co/9cpxRJ2/pngwing-com-3.png"
+                  className="h-5 object-cover"
+                  alt=""
+                />
+                <p className="text-sm mt-1">MongoDB</p>
+              </div>
+            
+                <div className="bg-white p-2 rounded-md shadow-lg flex flex-col items-center justify-center">
+                <img
+                  src="https://i.ibb.co.com/fYCrkX9/jwt-seeklogo.png"
+                  className="h-8 object-cover"
+                  alt=""
+                />
+                <p className="text-sm mt-1">JWT</p>
+              </div>
+              <div className="bg-white p-2 rounded-md shadow-lg flex flex-col items-center justify-center">
+                <img src={reactQ} className="h-8 object-cover" alt="" />
+                <p className="text-sm mt-1">React Query</p>
+              </div>
+              <div className="bg-white p-2 rounded-md shadow-lg flex flex-col items-center justify-center">
+                <img src={reactR} className="h-8 object-cover" alt="" />
+                <p className="text-sm mt-1">React router</p>
+              </div>
+              <div className="bg-white p-2 rounded-md shadow-lg flex flex-col items-center justify-center">
+                <img src={tailwind} className="h-8 object-cover" alt="" />
+                <p className="text-sm mt-1">Tailwind</p>
+              </div>
+              <div className="bg-white p-2 rounded-md shadow-lg flex flex-col items-center justify-center">
+                <img src={github} className="h-5 object-cover" alt="" />
+                <p className="text-sm mt-1">Github</p>
+              </div>
             </div>
           </div>
+         
         </motion.div>
+        
         {isOpen && (
           <motion.div className="lg:col-span-2">
             <h2 className="my-4 text-xl text-secondary font-bold">
@@ -157,22 +183,22 @@ const Fitness_studio = ({
               </li>
             </ul>
 
-            <div className="flex-col lg:flex-row gap-4 w-full justify-around items-center my-4">
+            <div className="flex flex-col md:flex-row gap-4 w-full justify-around items-center my-4">
               <a
                 href="https://github.com/Jubayer-Ahmed-Sajid/Fitness-Studio-client-side.git"
-                className="btn border-none w-auto lg:w-full text-gray-900 bg-secondary"
+                className="btn border-none md:w-auto w-full text-gray-900 bg-secondary"
               >
                 Client Site
               </a>
               <a
                 href="https://github.com/Jubayer-Ahmed-Sajid/Fitness-Studio-server-site.git"
-                className="btn w-auto lg:w-full border-none text-gray-900 bg-secondary"
+                className="btn md:w-auto w-full border-none text-gray-900 bg-secondary"
               >
                 Server site
               </a>
               <a
                 href="https://fitness-studio.surge.sh/"
-                className="btn border-none w-auto lg:w-full text-gray-900 bg-secondary"
+                className="btn border-none md:w-auto w-full text-gray-900 bg-secondary"
               >
                 Live site
               </a>
@@ -181,6 +207,7 @@ const Fitness_studio = ({
         )}
       </motion.div>
     </div>
+   
   );
 };
 

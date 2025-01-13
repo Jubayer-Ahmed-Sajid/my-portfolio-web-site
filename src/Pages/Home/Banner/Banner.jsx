@@ -23,10 +23,10 @@ const Banner = () => {
   return (
     <div className="hero px-6 min-h-screen">
       <div className="hero-content w-full items-center flex-col lg:justify-between lg:flex-row-reverse">
-        <div className="w-1/2">
+        <div className="lg:w-1/2">
           <img
             src={banner}
-            className="lg:h-[400px] md:h-[340px] h-[120px] border-dotted border-[4px] border-secondary object-cover rounded-full bg-black shadow-2xl md:pr-4"
+            className="lg:h-[400px] md:h-[340px] h-[230px] md:w-auto lg:w-auto w-[230px] border-dotted border-[4px] border-secondary object-cover rounded-full bg-black shadow-2xl md:pr-4"
           />
           <div className="flex text-secondary gap-4 md:gap-6 items-center text-2xl md:text-4xl my-6 justify-center">
             <a href="https://www.linkedin.com/in/jobayer-ahmed-sajid">
