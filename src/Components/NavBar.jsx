@@ -55,8 +55,8 @@ const NavBar = () => {
                 ${isScrolled ? "bg-blue-900/80 backdrop-blur-md shadow-lg" : "bg-transparent"}
             `}
         >
-            <div className="navbar px-2 py-2 text-white">
-                <div className="navbar-start w-full flex justify-between">
+            <div className="navbar flex justify-between px-2 py-2 text-white">
+                <div className="navbar-start md:w-auto w-full flex justify-between">
                     {/* Mobile Dropdown */}
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
