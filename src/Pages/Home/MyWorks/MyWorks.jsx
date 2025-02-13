@@ -12,7 +12,7 @@ import PetAdoption from "../../../Components/PetAdoption";
 import Library from "../../../Components/Library";
 const MyWorks = () => {
   return (
-    <div className="lg:mx-4 mt-12 p-6">
+    <div id="myWorks" className="lg:mx-4 mt-12 p-6">
       <h2 className="text-4xl mb-12 text-[#BDC3C7] text-center text-semibold">
         My Works
       </h2>
