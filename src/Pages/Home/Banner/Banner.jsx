@@ -28,7 +28,7 @@ const Banner = () => {
             src={banner}
             className="lg:h-[400px] md:h-[340px] h-[230px] md:w-auto lg:w-auto w-[230px] border-dotted border-[4px] border-secondary object-cover rounded-full bg-black shadow-2xl md:pr-4"
           />
-          <div className="flex text-secondary gap-4 md:gap-6 items-center text-2xl md:text-4xl my-6 justify-center">
+          <div className="flex gap-4 md:gap-6 items-center text-2xl md:text-4xl my-6 justify-center">
             <a href="https://www.linkedin.com/in/jobayer-ahmed-sajid">
               <FaLinkedin></FaLinkedin>
             </a>
@@ -62,7 +62,7 @@ const Banner = () => {
               ]}
               wrapper="span"
               speed={50}
-              className="text-xl [text-shadow:_2px_8px_8px_rgba(0_0_0_/_0.5)] text-secondary mb-4 "
+              className="text-xl [text-shadow:_2px_8px_8px_rgba(0_0_0_/_0.5)] mb-4 "
               repeat={Infinity}
             />
             <br />
@@ -74,7 +74,7 @@ const Banner = () => {
             </p>
             <button
               onClick={downloadResume}
-              className="btn mx-auto  font-semibold mt-2 text-gray-900 border-none bg-[#F1C40F]"
+              className="flex gap-2 items-center  font-semibold mt-2 text-gray-900 border-none"
             >
             
               <FaDownload></FaDownload>Download Resume

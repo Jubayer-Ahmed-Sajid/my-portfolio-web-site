@@ -22,7 +22,7 @@ const Contact = () => {
             });
     };
     return (
-        <div id='contacts' className=' overflow-hidden py-8 text-[#BDC3C7]'>
+        <div id='contacts' className=' overflow-hidden py-8'>
             <h2 className="mb-8 text-3xl text-center" data-aos='fade-left'>
                 Contact 
             </h2>
@@ -45,17 +45,17 @@ const Contact = () => {
             <h2 className='text-2xl font-semibold text-white lg:mt-0 mt-6  mb-4'>Send Message</h2>
                 <label>Name</label>
                 <br />
-                <input type="text" name="user_name" placeholder="Type your Name " className="text-slate-400 input mb-2 input-bordered input-accent w-full" />
+                <input type="text" name="user_name" placeholder="Type your Name " className="text-slate-400 input mb-2 input-bordered  w-full" />
                 <br />
                 <label>Email</label>
                 <br />
-                <input type="email" name="user_email"placeholder='Enter your Email' className="input mb-2 text-slate-400 input-bordered input-accent w-full" />
+                <input type="email" name="user_email"placeholder='Enter your Email' className="input mb-2 text-slate-400 input-bordered  w-full" />
                 <br />
                 <label>Message</label>
                 <br />
-                <textarea name="message" placeholder='Enter your Message' className="textarea mb-2 text-slate-400 border-accent  w-full"/>
+                <textarea name="message" placeholder='Enter your Message' className="textarea mb-2 text-slate-400  w-full"/>
                 <br />
-                <input className='btn bg-secondary px-8 w-full' type="submit" value="Send" />
+                <input className='btn px-8 w-full' type="submit" value="Send" />
             </form>
             </div>
         </div>

@@ -7,9 +7,9 @@ export default {
         custom: ["Raleway", "sans-serif"],
       },
       colors: {
-        primary: "#2C3E50", 
-        secondary: "#F1C40F",
-        accent: "#10B981", 
+        // primary: "#2C3E50", 
+        // secondary: "#F1C40F",
+        // accent: "#10B981", 
       },
     },
   },
