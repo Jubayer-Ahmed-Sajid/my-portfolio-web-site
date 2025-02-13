@@ -3,7 +3,7 @@ import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 const Footer = () => {
     return (
 
-        <footer className="footer p-10 bg-neutral text-neutral-content">
+        <footer className="footer p-10 text-neutral-content">
             <aside>
                 
                 <p>Jobayer Ahmed Sajid.<br />
