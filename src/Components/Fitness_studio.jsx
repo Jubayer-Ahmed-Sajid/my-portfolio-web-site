@@ -33,14 +33,26 @@ const Fitness_studio = ({
           {/* adding scrollbar for images */}
           <h2 className="my-2 text-xl font-bold">(Team Project)</h2>
           <Swiper
-            layer
             direction={"vertical"}
-            slidesPerView={"auto"}
-            freeMode={true}
-            scrollbar={true}
-            mousewheel={true}
+            freeMode={{
+              sticky: false,
+              momentumBounce: false,
+            }}
+            mousewheel={{
+              releaseOnEdges: true,
+              forceToAxis: true,
+              sensitivity: 1,
+              thresholdDelta: 30,
+            }}
+            scrollbar={{ draggable: true }}
             modules={[FreeMode, Scrollbar, Mousewheel]}
             className="mySwiper h-64 hover:scale-105 transition-transform duration-300 hover:my-2"
+            onReachEnd={(swiper) => {
+              swiper.el.classList.add("reached-end");
+            }}
+            onFromEdge={(swiper) => {
+              swiper.el.classList.remove("reached-end");
+            }}
           >
             <SwiperSlide layer>
               <img src={team_1} alt="" />
@@ -112,8 +124,8 @@ const Fitness_studio = ({
                 />
                 <p className="text-sm mt-1">MongoDB</p>
               </div>
-            
-                <div className="bg-white p-2 rounded-md shadow-lg flex flex-col items-center justify-center">
+
+              <div className="bg-white p-2 rounded-md shadow-lg flex flex-col items-center justify-center">
                 <img
                   src="https://i.ibb.co.com/fYCrkX9/jwt-seeklogo.png"
                   className="h-8 object-cover"
@@ -139,9 +151,8 @@ const Fitness_studio = ({
               </div>
             </div>
           </div>
-         
         </motion.div>
-        
+
         {isOpen && (
           <motion.div className="lg:col-span-2">
             <h2 className="my-4 text-xl text-secondary font-bold">
@@ -207,7 +218,6 @@ const Fitness_studio = ({
         )}
       </motion.div>
     </div>
-   
   );
 };
 

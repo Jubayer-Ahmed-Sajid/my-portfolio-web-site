@@ -29,14 +29,17 @@ const Banner = () => {
             className="lg:h-[400px] md:h-[340px] h-[230px] md:w-auto lg:w-auto w-[230px] border-dotted border-[4px] border-secondary object-cover rounded-full bg-black shadow-2xl md:pr-4"
           />
           <div className="flex gap-4 md:gap-6 items-center text-2xl md:text-4xl my-6 justify-center">
-            <a href="https://www.linkedin.com/in/jobayer-ahmed-sajid">
-              <FaLinkedin></FaLinkedin>
+            <a
+              className="hover:scale-110 p-1 rounded-md text-white bg-gradient-to-r from-[#FF6B35] to-[#6A0572] hover:from-[#6A0572] hover:to-[#FF6B35] group"
+              href="https://www.linkedin.com/in/jobayer-ahmed-sajid"
+            >
+              <FaLinkedin className="transition-transform duration-700 group-hover:rotate-[360deg]" />
             </a>
-            <a  href="https://www.facebook.com/jubayer.ahmed.sajid">
-              <FaFacebook></FaFacebook>
+            <a className="p-1 hover:scale-110 rounded-md text-white bg-gradient-to-r from-[#FF6B35] to-[#6A0572] hover:from-[#6A0572] hover:to-[#FF6B35] group" href="https://www.facebook.com/jubayer.ahmed.sajid">
+              <FaFacebook className="transition-transform duration-700 group-hover:rotate-[360deg]"></FaFacebook>
             </a>
-            <a href="https://github.com/Jubayer-Ahmed-Sajid">
-              <FaGithub></FaGithub>
+            <a className="p-1 rounded-md text-white bg-gradient-to-r from-[#FF6B35] to-[#6A0572] hover:from-[#6A0572] hover:scale-110 hover:to-[#FF6B35] group" href="https://github.com/Jubayer-Ahmed-Sajid">
+              <FaGithub className="transition-transform duration-700 group-hover:rotate-[360deg]"></FaGithub>
             </a>
           </div>
         </div>
@@ -62,7 +65,7 @@ const Banner = () => {
               ]}
               wrapper="span"
               speed={50}
-              className="text-xl [text-shadow:_2px_8px_8px_rgba(0_0_0_/_0.5)] mb-4 "
+              className="text-xl font-semibold text-[#6A0572] [text-shadow:_2px_8px_8px_rgba(0_0_0_/_0.5)] mb-4 "
               repeat={Infinity}
             />
             <br />
@@ -74,9 +77,8 @@ const Banner = () => {
             </p>
             <button
               onClick={downloadResume}
-              className="flex gap-2 items-center  font-semibold mt-2 text-gray-900 border-none"
+              className="flex gap-2 items-center bg-gradient-to-r from-[#FF6B35] to-[#6A0572] text-white p-3 rounded-md font-semibold mt-2 border-none hover:from-[#6A0572] hover:to-[#FF6B35] transition-all duration-300 "
             >
-            
               <FaDownload></FaDownload>Download Resume
             </button>
           </div>
