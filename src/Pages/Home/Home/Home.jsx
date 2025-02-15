@@ -30,7 +30,7 @@ const Home = () => {
   const options = useMemo(
     () => ({
       background: {
-        image: "linear-gradient(135deg,   #0099CC,#33CCFF)",
+        image: "linear-gradient(135deg,   #010A0F, #0A6C74)",
         position: "50% 50%",
         repeat: "no-repeat",
         size: "cover"

@@ -26,7 +26,7 @@ const Banner = () => {
         <div className="lg:w-1/2">
           <img
             src={banner}
-            className="lg:h-[400px] md:h-[340px] h-[230px] md:w-auto lg:w-auto w-[230px] border-dotted border-[4px] border-secondary object-cover rounded-full bg-black shadow-2xl md:pr-4"
+            className="lg:h-[400px] md:h-[340px] h-[230px] md:w-auto lg:w-auto w-[230px] border-dotted border-[4px] border-[#6A0572] object-cover rounded-full bg-black shadow-2xl md:pr-4"
           />
           <div className="flex gap-4 md:gap-6 items-center text-2xl md:text-4xl my-6 justify-center">
             <a
@@ -65,7 +65,7 @@ const Banner = () => {
               ]}
               wrapper="span"
               speed={50}
-              className="text-xl font-semibold text-[#6A0572] [text-shadow:_2px_8px_8px_rgba(0_0_0_/_0.5)] mb-4 "
+              className="text-xl font-semibold text-[#FF6B35] [text-shadow:_2px_8px_8px_rgba(0_0_0_/_0.5)] mb-4 "
               repeat={Infinity}
             />
             <br />

@@ -23,7 +23,7 @@ const PetAdoption = ({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
+    <div className="text-black">
       <motion.div
         layout
         onClick={() => setIsOpen(!isOpen)}
@@ -33,14 +33,26 @@ const PetAdoption = ({
           {/* adding scrollbar for images */}
           <h2 className="my-2 text-xl font-bold">(Personal Project)</h2>
           <Swiper
-            layer
             direction={"vertical"}
-            slidesPerView={"auto"}
-            freeMode={true}
-            scrollbar={true}
-            mousewheel={true}
+            freeMode={{
+              sticky: false,
+              momentumBounce: false,
+            }}
+            mousewheel={{
+              releaseOnEdges: true,
+              forceToAxis: true,
+              sensitivity: 1,
+              thresholdDelta: 30,
+            }}
+            scrollbar={{ draggable: true }}
             modules={[FreeMode, Scrollbar, Mousewheel]}
             className="mySwiper h-64 hover:scale-105 transition-transform duration-300 hover:my-2"
+            onReachEnd={(swiper) => {
+              swiper.el.classList.add("reached-end");
+            }}
+            onFromEdge={(swiper) => {
+              swiper.el.classList.remove("reached-end");
+            }}
           >
             <SwiperSlide layer>
               <img src={pet_1} alt="" />
@@ -71,6 +83,7 @@ const PetAdoption = ({
               <img src={pet_8} alt="" />
             </SwiperSlide>
           </Swiper>
+
           <div className="space-y-4">
             <p className="my-3">
               <span className="text-lg font-semibold">Paws and Hearts</span>{" "}
@@ -139,10 +152,11 @@ const PetAdoption = ({
               </div>
             </div>
           </div>
+
         </motion.div>
         {isOpen && (
           <motion.div className="lg:col-span-2">
-            <h2 className="my-4 text-xl text-secondary font-bold">
+            <h2 className="my-4 text-xl text-[#FF6B35] font-bold">
               Key Features:
             </h2>
             <ul className="space-y-2 list-disc px-2">
@@ -182,25 +196,26 @@ const PetAdoption = ({
             <div className="flex flex-col md:flex-row gap-4 w-full justify-around items-center my-4">
               <a
                 href="https://github.com/Jubayer-Ahmed-Sajid/Pet-adoption-client-site"
-                className="btn md:w-auto w-full border-none text-gray-900 bg-secondary"
+                className="btn bg-gradient-to-r from-[#FF6B35] to-[#6A0572] hover:from-[#6A0572] hover:to-[#FF6B35] duration-300 transition-colors border-none md:w-auto w-full text-white"
               >
                 Client Site
               </a>
               <a
                 href="https://github.com/Jubayer-Ahmed-Sajid/Pet-adoption-server-site"
-                className="btn md:w-auto w-full border-none text-gray-900 bg-secondary"
+                className="btn bg-gradient-to-r from-[#FF6B35] to-[#6A0572] hover:from-[#6A0572] hover:to-[#FF6B35] duration-300 transition-colors border-none md:w-auto w-full text-white"
               >
                 Server site
               </a>
               <a
                 href="https://paws-and-hearts-js.vercel.app"
-                className="btn md:w-auto w-full border-none text-gray-900 bg-secondary"
+                className="btn bg-gradient-to-r from-[#FF6B35] to-[#6A0572] hover:from-[#6A0572] hover:to-[#FF6B35] duration-300 transition-colors border-none md:w-auto w-full text-white"
               >
                 Live site
               </a>
             </div>
           </motion.div>
         )}
+
       </motion.div>
     </div>
   );

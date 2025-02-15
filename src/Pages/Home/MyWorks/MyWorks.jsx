@@ -13,8 +13,9 @@ import Library from "../../../Components/Library";
 const MyWorks = () => {
   return (
     <div id="myWorks" className="lg:mx-4 mt-12 p-6">
-      <h2 className="text-4xl mb-12 text-[#BDC3C7] text-center text-semibold">
+      <h2 className="text-4xl mb-12 text-white text-center text-semibold">
         My Works
+        <hr className="w-2/3 mt-2 mx-auto h-[3px] bg-gradient-to-r from-[#FF6B35]/10 via-[#FF6B35]/60 to-[#FF6B35] border-none" />
       </h2>
       <motion.div layout className="grid lg:grid-cols-2 gap-6">
        

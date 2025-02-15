@@ -23,7 +23,7 @@ const Fitness_studio = ({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
+    <div className="text-black">
       <motion.div
         layout
         onClick={() => setIsOpen(!isOpen)}
@@ -32,6 +32,7 @@ const Fitness_studio = ({
         <motion.div>
           {/* adding scrollbar for images */}
           <h2 className="my-2 text-xl font-bold">(Team Project)</h2>
+
           <Swiper
             direction={"vertical"}
             freeMode={{
@@ -83,6 +84,7 @@ const Fitness_studio = ({
               <img src={team_8} alt="" />
             </SwiperSlide>
           </Swiper>
+
           <div className="space-y-4">
             <p className="my-3">
               <span className="text-lg font-semibold">Fitness Studio</span>{" "}
@@ -151,11 +153,12 @@ const Fitness_studio = ({
               </div>
             </div>
           </div>
+
         </motion.div>
 
         {isOpen && (
           <motion.div className="lg:col-span-2">
-            <h2 className="my-4 text-xl text-secondary font-bold">
+            <h2 className="my-4 text-xl text-[#FF6B35] font-bold">
               Key Features:
             </h2>
             <ul className="space-y-2 list-disc px-2">
@@ -197,19 +200,19 @@ const Fitness_studio = ({
             <div className="flex flex-col md:flex-row gap-4 w-full justify-around items-center my-4">
               <a
                 href="https://github.com/Jubayer-Ahmed-Sajid/Fitness-Studio-client-side.git"
-                className="btn border-none md:w-auto w-full text-gray-900 bg-secondary"
+                className="btn bg-gradient-to-r from-[#FF6B35] to-[#6A0572] hover:from-[#6A0572] hover:to-[#FF6B35] duration-300 transition-colors border-none md:w-auto w-full text-white"
               >
                 Client Site
               </a>
               <a
                 href="https://github.com/Jubayer-Ahmed-Sajid/Fitness-Studio-server-site.git"
-                className="btn md:w-auto w-full border-none text-gray-900 bg-secondary"
+                className="btn bg-gradient-to-r from-[#FF6B35] to-[#6A0572] hover:from-[#6A0572] hover:to-[#FF6B35] duration-300 transition-colors border-none md:w-auto w-full text-white"
               >
                 Server site
               </a>
               <a
                 href="https://fitness-studio.surge.sh/"
-                className="btn border-none md:w-auto w-full text-gray-900 bg-secondary"
+                className="btn bg-gradient-to-r from-[#FF6B35] to-[#6A0572] hover:from-[#6A0572] hover:to-[#FF6B35] duration-300 transition-colors border-none md:w-auto w-full text-white"
               >
                 Live site
               </a>

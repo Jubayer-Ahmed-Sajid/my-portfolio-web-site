@@ -14,10 +14,12 @@ const Skills = () => {
   };
 
   return (
-    <div id="skills" className="lg:w-1/2 mx-4 lg:mx-auto">
-      <h2 className=" text-4xl text-[#BDC3C7] text-center overflow-hidden my-8 ">
+    <div id="skills" className=" mx-4 lg:mx-auto">
+      <h2 className=" text-4xl text-white text-center overflow-hidden my-8 ">
         Skill Sets
       </h2>
+      <hr className="w-2/3 mx-auto mt-2 h-[3px] bg-gradient-to-r from-[#FF6B35]/10 via-[#FF6B35]/60 to-[#FF6B35] border-none" />
+      <div className="lg:w-1/2 mx-auto mt-8 lg:mt-12">
       <h2 className="text-2xl text-white font-semibold">Expertise</h2>
       <motion.div  initial="hidden"
        animate="visible"
@@ -88,7 +90,11 @@ const Skills = () => {
         </div>
       </motion.div>
 
+      </div>
+
       {/* comfortable */}
+      <div className="lg:w-1/2 mx-auto mt-4 lg:mt-8">
+
       <h2 className="text-2xl text-white font-semibold pt-12">Comfortable</h2>
       <motion.div
       
@@ -150,6 +156,7 @@ const Skills = () => {
           <p className="text-center font-semibold mt-3 ">Github</p>
         </motion.div>
       </motion.div>
+      </div>
     </div>
   );
 };

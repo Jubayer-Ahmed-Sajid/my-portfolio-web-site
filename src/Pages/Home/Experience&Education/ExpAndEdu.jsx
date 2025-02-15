@@ -9,18 +9,19 @@ const ExpAndEdu = () => {
     },[])
     return (
         <div id="education" className=" overflow-hidden mt-8 px-8">
-            <h2 className="text-white text-3xl font-bold text-center" data-aos='fade-up'>Education and <span className=" ">Experience</span> </h2>
+            <h2 className="text-white text-3xl font-bold text-center" data-aos='fade-up'>Education and <span className="text-[#FF6B35]">Experience</span> </h2>
+            <hr className="w-2/3 mt-2 mx-auto h-[3px] bg-gradient-to-r from-[#FF6B35]/10 via-[#FF6B35]/60 to-[#FF6B35] border-none" />
             <div className=" lg:grid w-full gap-12 grid-cols-2">
                 <div className="w-full" data-aos='fade-left'>
                     <div className="my-12 flex items-center gap-2 justify-center">
 
                         <h2 className="text-2xl text-white font-semibold"> Education </h2>
-                        <p className="text-4xl "><FaGraduationCap></FaGraduationCap> </p>
+                        <p className="text-4xl "><FaGraduationCap className="text-[#FF6B35]"></FaGraduationCap> </p>
                     </div>
                     <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
                         <li>
                             <div className="timeline-middle ml-4">
-                                <FaGraduationCap className="text-3xl mr-2"></FaGraduationCap>
+                                <FaGraduationCap className="text-3xl text-white mr-2"></FaGraduationCap>
                             </div>
                             <div className="timeline-start text-white md:text-end mb-10">
                                 <h4 className="text-white  font-semibold">2021-present</h4>
@@ -31,7 +32,7 @@ const ExpAndEdu = () => {
                         </li>
                         <li>
                             <div className="timeline-middle ml-4">
-                                <FaGraduationCap className="text-3xl  mr-2"></FaGraduationCap>
+                                <FaGraduationCap className="text-3xl text-[#FF6B35] mr-2"></FaGraduationCap>
                             </div>
                             <div className="timeline-start text-white md:text-end mb-10">
                             <h4 className="text-white  font-semibold">2018-2020</h4>
@@ -51,7 +52,7 @@ const ExpAndEdu = () => {
                             </div>
                             <hr />
                             <div className="timeline-middle ml-4">
-                                <FaGraduationCap className="text-3xl  mr-2"></FaGraduationCap>
+                                <FaGraduationCap className="text-3xl text-[#FF6B35] mr-2"></FaGraduationCap>
                             </div>
                         </li>
                     </ul>
@@ -61,7 +62,7 @@ const ExpAndEdu = () => {
                 <div className="w-full" data-aos='fade-right'>
                     <div className="my-12 flex items-center gap-2 justify-center">
                         <h2 className="text-white text-2xl text-semibold">Experience</h2>
-                        <p className="text-4xl ">< FaBuromobelexperte></FaBuromobelexperte> </p>
+                        <p className="text-4xl ">< FaBuromobelexperte className="text-[#FF6B35]"></FaBuromobelexperte> </p>
                     </div>
                         <p className="text-white mt-4">I am a dynamic junior MERN stack web developer actively engaged in leveraging cutting-edge technologies to deliver impactful web solutions. Over the past one and half years, I have successfully conceived and executed multiple projects, showcasing my expertise in the MERN stack. My project portfolio, detailed above, demonstrates a commitment to delivering high-quality and innovative web applications.
                             <br />
