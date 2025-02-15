@@ -1,15 +1,9 @@
 import { FaDownload, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import "./banner.css";
 import { TypeAnimation } from "react-type-animation";
-import { useEffect } from "react";
 import banner from "../../../assets/IMG-20240211-WA0025_5-removebg~2[1].png";
-import Aos from "aos";
 const Banner = () => {
-  useEffect(() => {
-    Aos.init({
-      duration: 1500,
-    });
-  }, []);
+  
   const downloadResume = () => {
     const pdfUrl = "resume_001.pdf";
     const link = document.createElement("a");
