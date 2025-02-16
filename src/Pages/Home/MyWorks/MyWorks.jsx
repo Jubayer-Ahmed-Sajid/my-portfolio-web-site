@@ -34,27 +34,28 @@ const MyWorks = () => {
         My Works
       </h2>
 
-      {/* Animated HR - Triggers Every Time It Enters the Viewport */}
+     
       <motion.hr
         className="w-2/3 mx-auto h-[3px] bg-gradient-to-r from-[#FF6B35]/10 via-[#FF6B35]/60 to-[#FF6B35] border-none"
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.5, once: false }} // This makes sure it animates every time
+        viewport={{ amount: 0.5, once: false }}
         variants={hrVariants}
       />
 
       {/* Projects Grid */}
       <motion.div 
         layout 
-        className="grid lg:grid-cols-2 gap-6 mt-12"
+        className="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-12"
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.3, once: false }} // Makes it animate every time it enters the viewport
+        viewport={{ amount: 0, once: false }} 
         variants={containerVariants}
       >
         {[Fitness_studio, Book_Shop, PetAdoption, Library].map((Component, index) => (
           <motion.div key={index} variants={containerVariants}>
             <Component 
+           
               motion={motion}
               Swiper={Swiper}
               SwiperSlide={SwiperSlide}

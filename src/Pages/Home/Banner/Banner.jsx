@@ -6,10 +6,10 @@ import banner from "../../../assets/IMG-20240211-WA0025_5-removebg~2[1].png";
 const Banner = () => {
   // Download resume function
   const downloadResume = () => {
-    const pdfUrl = "resume_001.pdf";
+    const pdfUrl = "resume_of_Jobayer.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = "resume_001.pdf";
+    link.download = "resume_of_Jobayer.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
