@@ -4,22 +4,6 @@ import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdLocationOn, MdOutlineMailOutline } from "react-icons/md";
 
-// Animation Variants
-const fadeUp = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
-};
-
-const fadeLeft = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
-};
-
-const fadeRight = {
-  hidden: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
-};
-
 const Contact = () => {
   const form = useRef();
 
@@ -44,108 +28,119 @@ const Contact = () => {
   };
 
   return (
-    <div id="contacts" className="overflow-hidden py-8">
-      {/* Heading */}
-      <motion.h2
-        className="text-white text-3xl text-center"
-        variants={fadeLeft}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-      >
-        Contact
-      </motion.h2>
+    <section id="contacts" className="mx-auto max-w-7xl px-6 py-16 lg:py-24">
+      <div className="mx-auto max-w-4xl text-center">
+        <p className="text-sm font-semibold uppercase tracking-[0.4em] portfolio-section-label">
+          Contact
+        </p>
+        <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl">
+          Open to engineering roles and focused project work.
+        </h2>
+        <p className="mt-5 text-base leading-8 text-slate-300 sm:text-lg">
+          If you need someone who can solve problems, reason about systems, and
+          build dependable web software, send me a message.
+        </p>
+      </div>
 
-      <motion.hr
-        className="w-2/3 mt-2 mb-8 mx-auto h-[3px] bg-gradient-to-r from-[#FF6B35]/10 via-[#FF6B35]/60 to-[#FF6B35] border-none"
-        variants={fadeLeft}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-      />
-
-      <motion.div
-        className="px-6 mx-4 py-8 rounded-xl lg:flex items-center justify-around"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-      >
-        {/* Contact Info */}
+      <div className="mt-12 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <motion.div
-          className="text-white lg:w-1/2 space-y-5"
-          variants={fadeLeft}
+          className="rounded-[2rem] border border-white/10 bg-slate-950/60 p-6 shadow-2xl shadow-slate-950/40"
+          variants={{
+            hidden: { opacity: 0, x: -36 },
+            visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+          }}
           initial="hidden"
           whileInView="visible"
           viewport={{ amount: 0.3 }}
         >
-          <h2 className="text-2xl font-semibold text-white mb-4">
-            Contact Info
-          </h2>
-          <div className="flex gap-2 items-center">
-            <FaWhatsapp className="text-[#FF6B35] text-3xl" />
-            <p>+8801843278491</p>
-          </div>
-          <div className="flex gap-2 items-center">
-            <MdOutlineMailOutline className="text-[#FF6B35] text-3xl" />
-            <p>sajid661aca@gmail.com</p>
-          </div>
-          <div className="flex gap-2 items-center">
-            <MdLocationOn className="text-[#FF6B35] text-3xl" />
-            <p>
-              Dhaka-1000, Hajji Muhammad Mohssin Hall,
-              <br /> University of Dhaka
-            </p>
+          <h3 className="text-2xl font-semibold text-white">Contact details</h3>
+          <p className="mt-3 text-sm leading-6 text-slate-300">
+            I’m open to software engineering opportunities, problem-solving
+            discussions, and collaborations that care about clarity.
+          </p>
+          <div className="mt-6 space-y-5 text-slate-300">
+            <div className="flex items-center gap-3">
+              <FaWhatsapp className="text-3xl portfolio-accent" />
+              <div>
+                <p className="text-xs uppercase tracking-[0.35em] text-slate-500">
+                  WhatsApp
+                </p>
+                <p className="mt-1">+8801843278491</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <MdOutlineMailOutline className="text-3xl portfolio-accent" />
+              <div>
+                <p className="text-xs uppercase tracking-[0.35em] text-slate-500">
+                  Email
+                </p>
+                <p className="mt-1">sajid661aca@gmail.com</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <MdLocationOn className="text-3xl portfolio-accent" />
+              <div>
+                <p className="text-xs uppercase tracking-[0.35em] text-slate-500">
+                  Location
+                </p>
+                <p className="mt-1">
+                  Dhaka-1000, Hajji Muhammad Mohssin Hall,
+                  <br /> University of Dhaka
+                </p>
+              </div>
+            </div>
           </div>
         </motion.div>
 
-        {/* Contact Form */}
         <motion.form
-          className="lg:w-1/2"
+          className="rounded-[2rem] border border-white/10 bg-slate-950/60 p-6 shadow-2xl shadow-slate-950/40"
           ref={form}
           onSubmit={sendEmail}
-          variants={fadeRight}
+          variants={{
+            hidden: { opacity: 0, x: 36 },
+            visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+          }}
           initial="hidden"
           whileInView="visible"
           viewport={{ amount: 0.3 }}
         >
-          <h2 className="text-2xl font-semibold text-white lg:mt-0 mt-6 mb-4">
-            Send Message
-          </h2>
-          <label className="text-white">Name</label>
-          <br />
-          <input
-            type="text"
-            name="user_name"
-            placeholder="Type your Name"
-            className="bg-white input mb-2 input-bordered w-full"
-          />
-          <br />
-          <label className="text-white">Email</label>
-          <br />
-          <input
-            type="email"
-            name="user_email"
-            placeholder="Enter your Email"
-            className="input mb-2 bg-white input-bordered w-full"
-          />
-          <br />
-          <label className="text-white">Message</label>
-          <br />
-          <textarea
-            name="message"
-            placeholder="Enter your Message"
-            className="textarea bg-white mb-2 w-full"
-          />
-          <br />
-          <input
-            className="btn text-white bg-gradient-to-r from-[#FF6B35] to-[#6A0572] hover:from-[#6A0572] hover:to-[#FF6B35] transition-all duration-300 border-none px-8 w-full"
-            type="submit"
-            value="Send"
-          />
+          <h3 className="text-2xl font-semibold text-white">Send a message</h3>
+          <div className="mt-6 space-y-4">
+            <label className="block text-sm font-medium text-slate-300">
+              Name
+              <input
+                type="text"
+                name="user_name"
+                placeholder="Type your name"
+                className="mt-2 input input-bordered w-full border-slate-700 bg-slate-900/70 text-slate-100 placeholder:text-slate-500 focus:border-sky-400 focus:outline-none"
+              />
+            </label>
+            <label className="block text-sm font-medium text-slate-300">
+              Email
+              <input
+                type="email"
+                name="user_email"
+                placeholder="Enter your email"
+                className="mt-2 input input-bordered w-full border-slate-700 bg-slate-900/70 text-slate-100 placeholder:text-slate-500 focus:border-sky-400 focus:outline-none"
+              />
+            </label>
+            <label className="block text-sm font-medium text-slate-300">
+              Message
+              <textarea
+                name="message"
+                placeholder="Tell me about your project or role"
+                className="mt-2 textarea textarea-bordered h-36 w-full border-slate-700 bg-slate-900/70 text-slate-100 placeholder:text-slate-500 focus:border-sky-400 focus:outline-none"
+              />
+            </label>
+            <input
+              className="portfolio-button mt-2 w-full border-none text-slate-950 transition-transform"
+              type="submit"
+              value="Send Message"
+            />
+          </div>
         </motion.form>
-      </motion.div>
-    </div>
+      </div>
+    </section>
   );
 };
 

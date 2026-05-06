@@ -1,98 +1,119 @@
 import { motion } from "framer-motion";
-import { FaBuromobelexperte, FaGraduationCap } from "react-icons/fa";
+import { FaCode, FaGraduationCap } from "react-icons/fa";
 
-// Animation Variants
-const fadeUp = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
-};
+const education = [
+  {
+    year: "2021 - Present",
+    degree: "Bachelor of Chinese Language and Culture",
+    institution: "University Of Dhaka",
+  },
+  {
+    year: "2018 - 2020",
+    degree: "Higher Secondary School Certificate",
+    institution: "Government Safar Ali College",
+  },
+  {
+    year: "2005 - 2018",
+    degree: "Play Group - Secondary School Certificate",
+    institution: "Bishanandi Hazi Khokan High School",
+  },
+];
 
-const fadeLeft = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
-};
-
-const fadeRight = {
-  hidden: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
-};
+const engineeringMilestones = [
+  {
+    title: "Competitive programming",
+    detail:
+      "Solved 120+ LeetCode, 330+ Codeforces, and 120+ CodeChef problems to sharpen problem decomposition.",
+  },
+  {
+    title: "Object-oriented programming",
+    detail:
+      "Studied OOP properly in C# along with design patterns and design principles.",
+  },
+  {
+    title: "Systems fundamentals",
+    detail:
+      "Covered MySQL, networking, and operating systems to build stronger system intuition.",
+  },
+  {
+    title: "Applied architecture",
+    detail:
+      "Built an inventory management system in ASP.NET MVC architecture.",
+  },
+];
 
 const ExpAndEdu = () => {
   return (
-    <div id="education" className="overflow-hidden mt-8 px-8">
-      {/* Heading */}
-      <motion.h2
-        className="text-white text-3xl font-bold text-center"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }} // Re-triggers when 30% of element is in view
-      >
-        Education and <span className="text-[#FF6B35]">Experience</span>
-      </motion.h2>
+    <section id="education" className="mx-auto max-w-7xl px-6 py-16 lg:py-24">
+      <div className="mx-auto max-w-4xl text-center">
+        <p className="text-sm font-semibold uppercase tracking-[0.4em] portfolio-section-label">
+          Education & foundation
+        </p>
+        <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl">
+          Technical depth that supports the engineering work.
+        </h2>
+        <p className="mt-5 text-base leading-8 text-slate-300 sm:text-lg">
+          My background combines formal education with a deliberate effort to
+          study the foundations that make software robust: data structures,
+          design, databases, networking, and operating systems.
+        </p>
+      </div>
 
-      <motion.hr
-        className="w-2/3 mt-2 mx-auto h-[3px] bg-gradient-to-r from-[#FF6B35]/10 via-[#FF6B35]/60 to-[#FF6B35] border-none"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-      />
-
-      <div className="lg:grid w-full gap-12 grid-cols-2">
-        {/* Education Section */}
-        <motion.div className="w-full" variants={fadeLeft} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }}>
-          <div className="my-12 flex items-center gap-2 justify-center">
-            <h2 className="text-2xl text-white font-semibold">Education</h2>
-            <FaGraduationCap className="text-4xl text-[#FF6B35]" />
+      <div className="mt-12 grid gap-8 lg:grid-cols-2">
+        <motion.div
+          className="rounded-[2rem] border border-white/10 bg-slate-950/60 p-6 shadow-2xl shadow-slate-950/40"
+          initial={{ opacity: 0, x: -32 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.55 }}
+        >
+          <div className="flex items-center justify-center gap-3">
+            <h3 className="text-2xl font-semibold text-white">Education</h3>
+            <FaGraduationCap className="text-3xl portfolio-accent" />
           </div>
 
-          <motion.ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-            {[
-              { year: "2021 - Present", degree: "Bachelor of Chinese Language and Culture", institution: "University Of Dhaka" },
-              { year: "2018 - 2020", degree: "Higher Secondary School Certificate", institution: "Government Safar Ali College" },
-              { year: "2005 - 2018", degree: "Play Group - Secondary School Certificate", institution: "Bishanandi Hazi Khokan High School" },
-            ].map((edu, index) => (
-              <motion.li key={index} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }}>
-                <div className="timeline-middle ml-4">
-                  <FaGraduationCap className="text-3xl text-white mr-2" />
-                </div>
-                <div className="timeline-start text-white md:text-end mb-10">
-                  <h4 className="text-white font-semibold">{edu.year}</h4>
-                  <p>{edu.degree}</p>
-                  <p>{edu.institution}</p>
-                </div>
-                <hr />
-              </motion.li>
+          <div className="mt-8 space-y-4">
+            {education.map((item) => (
+              <div
+                key={item.year}
+                className="rounded-2xl border border-white/10 bg-white/5 p-4"
+              >
+                <p className="text-sm font-semibold portfolio-accent">{item.year}</p>
+                <p className="mt-2 text-lg font-semibold text-white">
+                  {item.degree}
+                </p>
+                <p className="mt-1 text-sm text-slate-300">{item.institution}</p>
+              </div>
             ))}
-          </motion.ul>
+          </div>
         </motion.div>
 
-        {/* Experience Section */}
-        <motion.div className="w-full" variants={fadeRight} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }}>
-          <div className="my-12 flex items-center gap-2 justify-center">
-            <h2 className="text-white text-2xl font-semibold">Experience</h2>
-            <FaBuromobelexperte className="text-4xl text-[#FF6B35]" />
+        <motion.div
+          className="rounded-[2rem] border border-white/10 bg-slate-950/60 p-6 shadow-2xl shadow-slate-950/40"
+          initial={{ opacity: 0, x: 32 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.55 }}
+        >
+          <div className="flex items-center justify-center gap-3">
+            <h3 className="text-2xl font-semibold text-white">Engineering growth</h3>
+            <FaCode className="text-3xl portfolio-accent" />
           </div>
 
-          <motion.p className="text-white mt-4" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }}>
-            I am a dynamic junior MERN stack web developer actively engaged in leveraging
-            cutting-edge technologies to deliver impactful web solutions. Over the past
-            one and a half years, I have successfully conceived and executed multiple
-            projects, showcasing my expertise in the MERN stack. My project portfolio,
-            detailed above, demonstrates a commitment to delivering high-quality and
-            innovative web applications.
-            <br />
-            <br />
-            While my primary focus lies in frontend technologies, I am actively expanding
-            my skill set to encompass backend development, thereby ensuring a
-            comprehensive understanding of the entire development stack. This journey
-            involves continuous learning and a dedicated effort to hone my proficiency in
-            backend technologies within the MERN stack.
-          </motion.p>
+          <div className="mt-8 space-y-4">
+            {engineeringMilestones.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-white/10 bg-white/5 p-4"
+              >
+                <p className="text-sm font-semibold portfolio-accent">{item.title}</p>
+                <p className="mt-2 text-sm leading-6 text-slate-300">
+                  {item.detail}
+                </p>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

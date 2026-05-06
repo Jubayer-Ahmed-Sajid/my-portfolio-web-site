@@ -1,107 +1,121 @@
 import { motion } from "framer-motion";
-import daisy from "../../../assets/daisyui-seeklogo.png";
-import reactD from "../../../assets/react-router-seeklogo.svg";
-import reactQ from "../../../assets/react-query-seeklogo.png";
-import fireB from "../../../assets/firebase-seeklogo.png";
-import gitHub from "../../../assets/github-logo.png";
 
-// Variants for animations
-const skillVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.5 }
+const competencyGroups = [
+  {
+    title: "Problem solving",
+    summary: "LeetCode, Codeforces, CodeChef",
+    items: [
+      "Algorithm design and complexity analysis",
+      "Debugging under pressure and optimizing solutions",
+      "Consistent practice across competitive platforms",
+    ],
   },
-};
+  {
+    title: "Object-oriented design",
+    summary: "C# OOP, design patterns, design principles",
+    items: [
+      "Encapsulation, inheritance, polymorphism, and abstraction",
+      "Writing reusable code with clean responsibilities",
+      "Studied commonly used design principles and patterns",
+    ],
+  },
+  {
+    title: "Backend and data",
+    summary: "ASP.NET MVC, MySQL, inventory workflows",
+    items: [
+      "Built an inventory management system in ASP.NET MVC",
+      "Relational thinking and practical database usage",
+      "CRUD flows, validations, and structured data handling",
+    ],
+  },
+  {
+    title: "Systems fundamentals",
+    summary: "Networking, operating systems, Git",
+    items: [
+      "Client-server communication and request flow",
+      "Operating system basics that help with practical debugging",
+      "Version control hygiene and delivery discipline",
+    ],
+  },
+  {
+    title: "Web delivery",
+    summary: "React, Node.js, Express, Tailwind",
+    items: [
+      "Turn ideas into clean user interfaces and working products",
+      "Component-driven development and API integration",
+      "Responsive layouts with a careful UI finish",
+    ],
+  },
+];
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.2 },
+    transition: { staggerChildren: 0.1 },
   },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.45 } },
 };
 
 const Skills = () => {
   return (
-    <div id="skills" className="mx-4 lg:mx-auto">
-      <h2 className="text-4xl text-white text-center my-8">Skill Sets</h2>
+    <section id="skills" className="mx-auto max-w-7xl px-6 py-16 lg:py-24">
+      <div className="mx-auto max-w-4xl text-center">
+        <p className="text-sm font-semibold uppercase tracking-[0.4em] portfolio-section-label">
+          Core competencies
+        </p>
+        <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl">
+          Skills organized around engineering discipline.
+        </h2>
+        <p className="mt-5 text-base leading-8 text-slate-300 sm:text-lg">
+          My toolkit is structured around the way I solve problems: understand the
+          constraints, choose the right abstraction, and implement cleanly.
+        </p>
+      </div>
 
-      {/* Animated HR - Triggers Every Time It Enters the Viewport */}
-      <motion.hr
-        className="w-2/3 mx-auto mt-2 h-[3px] bg-gradient-to-r from-[#FF6B35]/10 via-[#FF6B35]/60 to-[#FF6B35] border-none"
+      <div className="mt-12 rounded-[2rem] border border-white/10 bg-slate-950/60 p-6 text-slate-300 shadow-2xl shadow-slate-950/40">
+        <p className="text-lg leading-8">
+          The tools change, but the discipline stays the same. I care about
+          reasoning, correctness, and code that can grow without losing clarity.
+        </p>
+      </div>
+
+      <motion.div
+        className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3"
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.5, once: false }} // Ensures animation triggers every time
-        variants={{
-          hidden: { scaleX: 0, opacity: 0 },
-          visible: { scaleX: 1, opacity: 1, transition: { duration: 1, ease: "easeInOut" } },
-        }}
-      />
-
-      {/* Expertise Section */}
-      <div className="lg:w-1/2 mx-auto mt-8 lg:mt-12">
-        <h2 className="text-2xl text-white font-semibold">Expertise</h2>
-        <motion.div
-          className="grid grid-cols-3 lg:gap-8 gap-4 mx-auto mt-8"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.3, once: false }} // Allows animation to reset on scroll
-          variants={containerVariants}
-        >
-          {[
-            { img: "https://i.ibb.co/Xp0vCQd/kisspng-react-logo.png", name: "React" },
-            { img: reactD, name: "React Router Dom" },
-            { img: daisy, name: "Daisy UI" },
-            { img: "https://i.ibb.co/fYCrkX9/jwt-seeklogo.png", name: "JWT" },
-            { img: "https://i.ibb.co/VL2f0CW/pngwing-com-1.png", name: "JavaScript" },
-            { img: "https://i.ibb.co/VQYXV8t/pngwing-com-4.png", name: "Tailwind CSS" },
-          ].map((skill, index) => (
-            <motion.div
-              key={index}
-              className="bg-white rounded-md py-2 flex flex-col items-center hover:scale-105 hover:shadow-xl transition-all"
-              variants={skillVariants}
-              whileHover={{ scale: 1.1 }}
-            >
-              <img src={skill.img} className="h-8 lg:h-12 mx-auto object-cover" alt={skill.name} />
-              <p className="text-center font-semibold mt-3">{skill.name}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-
-      {/* Comfortable Section */}
-      <div className="lg:w-1/2 mx-auto mt-4 lg:mt-8">
-        <h2 className="text-2xl text-white font-semibold pt-12">Comfortable</h2>
-        <motion.div
-          className="grid grid-cols-3 lg:gap-8 gap-4 mx-auto mt-8"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.3, once: false }} // Ensures animation triggers every time
-          variants={containerVariants}
-        >
-          {[
-            { img: "https://i.ibb.co/9cpxRJ2/pngwing-com-3.png", name: "MongoDB" },
-            { img: "https://i.ibb.co/q9FWKFT/pngfind-com.png", name: "Express" },
-            { img: "https://i.ibb.co/G2rsZZb/pngwing-com-2.png", name: "Node" },
-            { img: reactQ, name: "React Query" },
-            { img: fireB, name: "Firebase" },
-            { img: gitHub, name: "GitHub" },
-          ].map((skill, index) => (
-            <motion.div
-              key={index}
-              className="bg-white rounded-md py-2 flex flex-col items-center hover:scale-105 hover:shadow-xl transition-all"
-              variants={skillVariants}
-              whileHover={{ scale: 1.1 }}
-            >
-              <img src={skill.img} className="h-8 lg:h-12 mx-auto object-cover" alt={skill.name} />
-              <p className="text-center font-semibold mt-3">{skill.name}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </div>
+        viewport={{ amount: 0.2, once: false }}
+        variants={containerVariants}
+      >
+        {competencyGroups.map((group) => (
+          <motion.div
+            key={group.title}
+            className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+            variants={cardVariants}
+            whileHover={{ y: -4 }}
+          >
+            <p className="text-xs uppercase tracking-[0.35em] portfolio-section-label">
+              {group.title}
+            </p>
+            <p className="mt-3 text-lg font-semibold text-white">
+              {group.summary}
+            </p>
+            <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-300">
+              {group.items.map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#c7a36b]" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        ))}
+      </motion.div>
+    </section>
   );
 };
 

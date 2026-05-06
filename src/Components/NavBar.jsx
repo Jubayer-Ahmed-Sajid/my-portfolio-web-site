@@ -4,13 +4,22 @@ const NavBar = () => {
     const [activeLink, setActiveLink] = useState("");
     const [isScrolled, setIsScrolled] = useState(false);
 
+    const links = [
+        { href: "#", label: "Home" },
+        { href: "#about", label: "About" },
+        { href: "#skills", label: "Skills" },
+        { href: "#myWorks", label: "Projects" },
+        { href: "#education", label: "Education" },
+        { href: "#contacts", label: "Contact" },
+    ];
+
     useEffect(() => {
         const handleHashChange = () => {
-            setActiveLink(window.location.hash);
+            setActiveLink(window.location.hash || "#");
         };
 
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50); // Navbar effect on scroll
+            setIsScrolled(window.scrollY > 50);
         };
 
         window.addEventListener("hashchange", handleHashChange);
@@ -24,60 +33,56 @@ const NavBar = () => {
         };
     }, []);
 
-    const navLink = (
-        <>
-            {[
-                { href: "#", label: "Home" },
-                { href: "#about", label: "About" },
-                { href: "#myWorks", label: "Projects" },
-                { href: "#education", label: "Education" },
-                { href: "#contacts", label: "Contact" },
-            ].map((link) => (
-                <a
-                    key={link.href}
-                    href={link.href}
-                    className={`relative px-4 py-2 transition-all duration-300 hover:text-blue-500 
-                        ${
-                            activeLink === link.href
-                                ? "text-blue-500 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-blue-500"
-                                : "text-white"
-                        }`}
-                >
-                    <li className="list-none">{link.label}</li>
-                </a>
-            ))}
-        </>
-    );
+    const navLink = links.map((link) => (
+        <li key={link.href}>
+            <a
+                href={link.href}
+                className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ${
+                    activeLink === link.href
+                        ? "portfolio-nav-link-active"
+                        : "text-slate-300 hover:bg-white/5 hover:text-white"
+                }`}
+            >
+                {link.label}
+            </a>
+        </li>
+    ));
 
     return (
-        <div
-            className={`fixed top-0 left-0 w-full z-50 transition-all rounded-xl duration-300 
-                ${isScrolled ? "bg-black/50 backdrop-blur-md shadow-lg" : "bg-transparent"}
-            `}
+        <header
+            className={`portfolio-shell fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+                isScrolled ? "bg-black/55" : "bg-black/35"
+            }`}
         >
-            <div className="navbar flex justify-between px-2 py-2 text-white">
-                <div className="navbar-start md:w-auto w-full flex justify-between">
-                    {/* Mobile Dropdown */}
-                    <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </div>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg space-y-2 rounded-box w-52 bg-gray-900/90 text-white">
-                            {navLink}
-                        </ul>
+            <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-6">
+                <a href="#" className="flex items-center gap-3">
+                    <div className="portfolio-brand-badge flex h-10 w-10 items-center justify-center rounded-2xl text-sm font-bold">
+                        JS
                     </div>
-                    {/* Logo / Name */}
-                    <p className="lg:text-2xl font-semibold">Jobayer Ahmed Sajid</p>
+                    <div>
+                        <p className="text-base font-semibold text-white">Jobayer Ahmed Sajid</p>
+                        <p className="text-xs uppercase tracking-[0.28em] text-slate-400">Software Engineer</p>
+                    </div>
+                </a>
+
+                <div className="dropdown lg:hidden">
+                    <div tabIndex={0} role="button" className="btn btn-ghost rounded-2xl border border-white/10 bg-white/5 text-slate-100 hover:bg-white/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 w-56 rounded-2xl border border-white/10 bg-slate-950/95 p-2 shadow-2xl backdrop-blur-xl">
+                        {navLink}
+                    </ul>
                 </div>
 
-                {/* Desktop Nav */}
-                <div className="navbar-end hidden lg:flex">
-                    <ul className="menu menu-horizontal flex justify-between gap-8">{navLink}</ul>
-                </div>
+                <nav className="hidden lg:block">
+                    <ul className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 p-2">
+                        {navLink}
+                    </ul>
+                </nav>
             </div>
-        </div>
+        </header>
     );
 };
 

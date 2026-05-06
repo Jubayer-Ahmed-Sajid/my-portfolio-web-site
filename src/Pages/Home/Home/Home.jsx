@@ -1,116 +1,18 @@
-import { useEffect, useMemo, useState } from "react";
 import About from "../About/About";
 import Banner from "../Banner/Banner";
 import Contact from "../Contact/Contact";
 import ExpAndEdu from "../Experience&Education/ExpAndEdu";
 import MyWorks from "../MyWorks/MyWorks";
 import Skills from "../Skills/Skills";
-import { loadSlim } from "@tsparticles/slim";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
 
 const Home = () => {
-  const [init, setInit] = useState(false);
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
-      await loadSlim(engine);
-      //await loadBasic(engine);
-    }).then(() => {
-      setInit(true);
-    });
-  }, []);
-
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
-  const options = useMemo(
-    () => ({
-      background: {
-        image: "linear-gradient(135deg,   #010A0F, #0A6C74)",
-        position: "50% 50%",
-        repeat: "no-repeat",
-        size: "cover"
-      },
-
-
-      fpsLimit: 120,
-      interactivity: {
-        events: {
-          onClick: {
-            enable: true,
-            mode: "push",
-          },
-          onHover: {
-            enable: true,
-            mode: "repulse",
-          },
-        },
-        modes: {
-          push: {
-            quantity: 4,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
-          },
-        },
-      },
-      particles: {
-        color: {
-          value: "#ffffff",
-        },
-        links: {
-          color: "#ffffff",
-          distance: 150,
-          enable: true,
-          opacity: 0.5,
-          width: 1,
-        },
-        move: {
-          direction: "none",
-          enable: true,
-          outModes: {
-            default: "bounce",
-          },
-          random: false,
-          speed: 6,
-          straight: false,
-        },
-        number: {
-          density: {
-            enable: true,
-          },
-          value: 80,
-        },
-        opacity: {
-          value: 0.5,
-        },
-        shape: {
-          type: "circle",
-        },
-        size: {
-          value: { min: 1, max: 5 },
-        },
-      },
-      detectRetina: true,
-    }),
-    []
-  );
   return (
-    <div className="relative">
-      {init && (
-        <div className="fixed inset-0 -z-10">
-          <Particles
-            id="tsparticles"
-            particlesLoaded={particlesLoaded}
-            options={options}
-          />
-        </div>
-      )}
+    <div className="relative isolate overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute left-[-8rem] top-24 h-72 w-72 rounded-full bg-[rgba(199,163,107,0.12)] blur-3xl" />
+        <div className="absolute right-[-6rem] top-[28rem] h-80 w-80 rounded-full bg-[rgba(143,162,155,0.10)] blur-3xl" />
+        <div className="absolute bottom-[-6rem] left-1/3 h-64 w-64 rounded-full bg-white/5 blur-3xl" />
+      </div>
 
       <Banner></Banner>
       <About></About>

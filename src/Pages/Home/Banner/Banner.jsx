@@ -1,10 +1,36 @@
-import { FaDownload, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import banner from "../../../assets/IMG-20240211-WA0025_5-removebg~2[1].png";
 
+const achievementCards = [
+  { value: "120+", label: "LeetCode" },
+  { value: "330+", label: "Codeforces" },
+  { value: "120+", label: "CodeChef" },
+  { value: "1443 / 1157", label: "CodeChef max / Codeforces" },
+];
+
+const focusAreas = [
+  "OOP in C#",
+  "Design patterns & principles",
+  "MySQL",
+  "Networking & OS",
+];
+
+const socialLinks = [
+  {
+    icon: <FaLinkedin />,
+    label: "LinkedIn",
+    link: "https://www.linkedin.com/in/jobayer-ahmed-sajid",
+  },
+  {
+    icon: <FaGithub />,
+    label: "GitHub",
+    link: "https://github.com/Jubayer-Ahmed-Sajid",
+  },
+];
+
 const Banner = () => {
-  // Download resume function
   const downloadResume = () => {
     const pdfUrl = "resume_of_Jobayer.pdf";
     const link = document.createElement("a");
@@ -17,94 +43,148 @@ const Banner = () => {
 
   return (
     <motion.div
-      className="hero overflow-hidden px-6 min-h-screen"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      
+      className="mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl flex-col items-center gap-14 px-6 py-16 lg:flex-row lg:px-8 lg:py-24"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
     >
-      <div className="hero-content w-full items-center flex-col lg:justify-between lg:flex-row-reverse">
-        <motion.div
-          className="lg:w-1/2"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <img
-            src={banner}
-            className="lg:h-[400px] md:h-[340px] h-[230px] md:w-auto lg:w-auto w-[230px] border-dotted border-[4px] border-[#6A0572] object-cover rounded-full bg-black shadow-2xl md:pr-4"
-          />
-          <motion.div
-            className="flex gap-4 md:gap-6 items-center text-2xl md:text-4xl my-6 justify-center"
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-          >
-            {[{
-              icon: <FaLinkedin />,
-              link: "https://www.linkedin.com/in/jobayer-ahmed-sajid"
-            }, {
-              icon: <FaFacebook />,
-              link: "https://www.facebook.com/jubayer.ahmed.sajid"
-            }, {
-              icon: <FaGithub />,
-              link: "https://github.com/Jubayer-Ahmed-Sajid"
-            }].map((social, index) => (
-              <a
-                key={index}
-                className="hover:scale-110 p-1 rounded-md text-white bg-gradient-to-r from-[#FF6B35] to-[#6A0572] hover:from-[#6A0572] hover:to-[#FF6B35] group"
-                href={social.link}
-              >
-                <motion.div
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.7 }}
-                >
-                  {social.icon}
-                </motion.div>
-              </a>
-            ))}
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          className="w-full"
-          initial={{ x: -50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h3 className="md:text-2xl mb-4 text-slate-200">MERN Stack Developer,</h3>
-          <h1 className="text-2xl md:text-5xl text-white mb-2 font-bold">
-            Hello, <br /> I am Jobayer Ahmed Sajid!
-          </h1>
+      <motion.div
+        className="w-full flex-1"
+        initial={{ x: -40, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <p className="text-sm font-semibold uppercase tracking-[0.4em] portfolio-section-label">
+          Software Engineer
+        </p>
+        <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          Building dependable software with a problem-solving mindset.
+        </h1>
+        <div className="mt-6 text-xl font-semibold portfolio-accent sm:text-2xl">
           <TypeAnimation
             sequence={[
-              "Unleashing Digital Excellence.",
+              "Competitive programmer.",
               1000,
-              "Crafting Tomorrow, Today.",
+              "C# and ASP.NET MVC builder.",
               1000,
-              "Connect, Create, Captivate.",
+              "OOP, design patterns, and systems fundamentals.",
               1000,
-              "Transforming Vision into Reality",
+              "Focused on reliability, clarity, and delivery.",
               1000,
             ]}
             wrapper="span"
-            speed={50}
-            className="text-xl font-semibold text-[#FF6B35] [text-shadow:_2px_8px_8px_rgba(0_0_0_/_0.5)] mb-4"
+            speed={55}
             repeat={Infinity}
           />
-          <p className="text-white my-2 md:w-3/4">
-            Creating dynamic, scalable web applications with expertise in the MERN stack—MongoDB, Express, React, and Node.js. I focus on delivering seamless user experiences, efficient backend solutions, and responsive designs tailored to meet diverse project needs.
-          </p>
+        </div>
+        <p className="mt-6 max-w-2xl text-base leading-8 portfolio-muted sm:text-lg">
+          I design and build web applications with a strong focus on algorithmic
+          thinking, object-oriented design, and practical system fundamentals.
+          My competitive programming routine includes 120+ LeetCode problems,
+          330+ Codeforces problems, and 120+ CodeChef problems, with a
+          CodeChef rating of 1443 max and Codeforces 1157.
+        </p>
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          {achievementCards.map((card) => (
+            <div
+              key={card.label}
+              className="portfolio-card-soft p-4 backdrop-blur-sm"
+            >
+              <p className="text-2xl font-semibold text-white">{card.value}</p>
+              <p className="mt-1 text-sm portfolio-muted">{card.label}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-8 flex flex-wrap gap-3">
+          {focusAreas.map((item) => (
+            <span
+              key={item}
+              className="portfolio-pill"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <motion.button
             onClick={downloadResume}
-            className="flex gap-2 items-center bg-gradient-to-r from-[#FF6B35] to-[#6A0572] text-white p-3 rounded-md font-semibold mt-2 border-none hover:from-[#6A0572] hover:to-[#FF6B35] transition-all duration-300"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            className="portfolio-button inline-flex items-center justify-center gap-2 px-6 py-3 shadow-lg shadow-black/20"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.98 }}
           >
             <FaDownload /> Download Resume
           </motion.button>
-        </motion.div>
-      </div>
+          <motion.a
+            href="#myWorks"
+            className="portfolio-button-ghost inline-flex items-center justify-center px-6 py-3"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            View Projects
+          </motion.a>
+        </div>
+        <div className="mt-8 flex items-center gap-4">
+          <span className="text-sm uppercase tracking-[0.35em] text-slate-500">
+            Connect
+          </span>
+          <div className="flex gap-3 text-xl">
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                className="portfolio-card-soft flex h-11 w-11 items-center justify-center text-slate-200 transition-colors hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]"
+                href={social.link}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={social.label}
+              >
+                {social.icon}
+              </a>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="w-full flex-1"
+        initial={{ x: 40, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="relative mx-auto max-w-md">
+          <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-[rgba(199,163,107,0.18)] via-[rgba(143,162,155,0.08)] to-transparent blur-3xl" />
+          <div className="portfolio-card relative overflow-hidden p-4 backdrop-blur-xl">
+            <img
+              src={banner}
+              alt="Jobayer Ahmed Sajid portrait"
+              className="h-[460px] w-full rounded-[1.5rem] object-cover object-top"
+            />
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+              <div className="portfolio-card-soft p-4">
+                <p className="text-xs uppercase tracking-[0.35em] portfolio-section-label">
+                  Focus
+                </p>
+                <p className="mt-2 text-lg font-semibold text-white">
+                  Problem solving first
+                </p>
+                <p className="mt-1 text-sm leading-6 portfolio-muted">
+                  Algorithms, debugging, and clear reasoning.
+                </p>
+              </div>
+              <div className="portfolio-card-soft p-4">
+                <p className="text-xs uppercase tracking-[0.35em] portfolio-section-label">
+                  System work
+                </p>
+                <p className="mt-2 text-lg font-semibold text-white">
+                  ASP.NET MVC inventory app
+                </p>
+                <p className="mt-1 text-sm leading-6 portfolio-muted">
+                  C# OOP, design, data flow, and architecture practice.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </motion.div>
   );
 };

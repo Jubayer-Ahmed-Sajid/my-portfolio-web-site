@@ -1,99 +1,124 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+const engineeringHighlights = [
+  {
+    title: "Competitive programming",
+    value: "570+ problems",
+    detail: "120+ LeetCode, 330+ Codeforces, and 120+ CodeChef solutions.",
+  },
+  {
+    title: "Computer science foundations",
+    value: "OOP, DB, OS",
+    detail: "Design patterns, design principles, networking, and MySQL.",
+  },
+  {
+    title: "Applied software design",
+    value: "C# + ASP.NET MVC",
+    detail: "Built an inventory management system with layered architecture.",
+  },
+];
+
+const studyAreas = [
+  "Object-oriented programming in C#",
+  "Design patterns and design principles",
+  "MySQL and data modeling",
+  "Networking fundamentals",
+  "Operating systems",
+  "ASP.NET MVC architecture",
+];
+
 const About = () => {
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const aboutSection = document.getElementById("about");
-      if (aboutSection) {
-        const { top, bottom } = aboutSection.getBoundingClientRect();
-        setIsSticky(top < 100 && bottom > window.innerHeight);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
+    <motion.section
+      id="about"
+      className="mx-auto max-w-7xl px-6 py-16 lg:py-24"
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="overflow-hidden"
     >
-      <h2 className="text-4xl text-center mb-2 font-bold text-white">About Me</h2>
-      <motion.hr
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        transition={{ duration: 0.5 }}
-        className="w-2/3 mx-auto h-[3px] bg-gradient-to-r from-[#FF6B35]/10 via-[#FF6B35]/60 to-[#FF6B35] border-none"
-      />
-      <section
-        id="about"
-        className="relative max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-      >
+      <div className="mx-auto max-w-3xl text-center">
+        <p className="text-sm font-semibold uppercase tracking-[0.4em] portfolio-section-label">
+          About
+        </p>
+        <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl">
+          Engineering profile built on problem solving.
+        </h2>
+        <p className="mt-5 text-base leading-8 text-slate-300 sm:text-lg">
+          I am a software engineer who enjoys turning uncertain requirements into
+          reliable software. My approach combines competitive programming, clean
+          object-oriented design, and practical system fundamentals so I can
+          reason about code, data, and architecture with the same discipline.
+        </p>
+      </div>
+
+      <div className="mt-12 grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          className="overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/60 p-4 shadow-2xl shadow-slate-950/40"
+          initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className={`lg:sticky top-24 transition-all duration-300 ${isSticky ? "lg:top-24" : ""}`}
         >
           <img
             src="https://i.ibb.co/mV7fNncK/rear-view-programmer-working-all-night-long-min.jpg"
             alt="Programming at Night"
-            className="w-full h-auto rounded-2xl shadow-lg"
+            className="h-full w-full rounded-[1.5rem] object-cover"
           />
+          <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+            <p className="text-xs uppercase tracking-[0.35em] text-slate-400">
+              What I optimize for
+            </p>
+            <p className="mt-2 text-lg font-semibold text-white">
+              Clear problem decomposition and maintainable code.
+            </p>
+          </div>
         </motion.div>
 
-        <motion.div
-          className="text-white space-y-6"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <p className="text-lg text-gray-300">
-            I am a passionate{" "}
-            <span className="text-[#FF6B35] font-semibold">Full-Stack Web Developer</span>{" "}
-            and{" "}
-            <span className="text-[#FF6B35] font-semibold">Competitive Programmer</span>{" "}
-            with expertise in building scalable web applications and solving complex algorithmic challenges.
-          </p>
+        <div className="space-y-6">
+          <div className="grid gap-4 md:grid-cols-3">
+            {engineeringHighlights.map((item, index) => (
+              <motion.div
+                key={item.title}
+                className="rounded-[1.75rem] border border-white/10 bg-slate-950/60 p-5"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+              >
+                <p className="text-xs uppercase tracking-[0.35em] portfolio-section-label">
+                  {item.title}
+                </p>
+                <p className="mt-3 text-2xl font-semibold text-white">
+                  {item.value}
+                </p>
+                <p className="mt-3 text-sm leading-6 text-slate-300">
+                  {item.detail}
+                </p>
+              </motion.div>
+            ))}
+          </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            className="rounded-[2rem] border border-white/10 bg-slate-950/60 p-6"
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, staggerChildren: 0.3 }}
-            className="space-y-4"
+            transition={{ duration: 0.5 }}
           >
-            <h3 className="text-2xl font-semibold text-[#FF6B35]">💻 Programming Skills</h3>
-            <ul className="space-y-3">
-              {[
-                "Full-Stack Development: MERN Stack (MongoDB, Express.js, React.js, Node.js)",
-                "Frontend: React.js, Next.js, Tailwind CSS, Redux",
-                "Backend: Node.js, Express.js, JWT Authentication, API Development",
-                "Database: MongoDB (Mongoose)",
-                "Programming & DSA: C++, JavaScript (Solving problems on Codeforces & CodeChef)",
-                "Tools & Deployment: Git, GitHub, Vercel, Firebase, Stripe Integration",
-              ].map((skill, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-center gap-3"
+            <h3 className="text-2xl font-semibold text-white">
+              What I study deeply
+            </h3>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              {studyAreas.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-200"
                 >
-                  <span className="text-[#FF6B35] text-2xl">✔</span>
-                  <p>{skill}</p>
-                </motion.li>
+                  {item}
+                </span>
               ))}
-            </ul>
+            </div>
           </motion.div>
-        </motion.div>
-      </section>
-    </motion.div>
+        </div>
+      </div>
+    </motion.section>
   );
 };
 
