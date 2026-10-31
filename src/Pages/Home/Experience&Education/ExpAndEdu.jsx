@@ -3,7 +3,12 @@ import { FaCode, FaGraduationCap } from "react-icons/fa";
 
 const education = [
   {
-    year: "2021 - Present",
+    year: "In progress",
+    degree: "Master's in Chinese Language and Culture",
+    institution: "University Of Dhaka",
+  },
+  {
+    year: "2021 - 2025",
     degree: "Bachelor of Chinese Language and Culture",
     institution: "University Of Dhaka",
   },
@@ -23,7 +28,7 @@ const engineeringMilestones = [
   {
     title: "Competitive programming",
     detail:
-      "Solved 120+ LeetCode, 330+ Codeforces, and 120+ CodeChef problems to sharpen problem decomposition.",
+      "Solved 150+ LeetCode, 330+ Codeforces, and 120+ CodeChef problems to sharpen problem decomposition.",
   },
   {
     title: "Object-oriented programming",

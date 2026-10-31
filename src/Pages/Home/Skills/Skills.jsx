@@ -21,11 +21,20 @@ const competencyGroups = [
   },
   {
     title: "Backend and data",
-    summary: "ASP.NET MVC, MySQL, inventory workflows",
+    summary: "ASP.NET MVC, MySQL, PostgreSQL, Firestore, inventory workflows",
     items: [
       "Built an inventory management system in ASP.NET MVC",
-      "Relational thinking and practical database usage",
+      "Relational and document data: MySQL, PostgreSQL, Firestore",
       "CRUD flows, validations, and structured data handling",
+    ],
+  },
+  {
+    title: "Product delivery",
+    summary: "Next.js, TypeScript, Firebase Hosting, Vercel",
+    items: [
+      "Shipped ZiCraft as a live freemium HSK learning product",
+      "Authentication, paywall, and gated content delivery",
+      "Deployment and verification on Firebase Hosting and Vercel",
     ],
   },
   {
@@ -39,10 +48,10 @@ const competencyGroups = [
   },
   {
     title: "Web delivery",
-    summary: "React, Node.js, Express, Tailwind",
+    summary: "React, Next.js, TypeScript, Node.js, Express, Tailwind",
     items: [
       "Turn ideas into clean user interfaces and working products",
-      "Component-driven development and API integration",
+      "Component-driven development, TypeScript, and API integration",
       "Responsive layouts with a careful UI finish",
     ],
   },

@@ -20,11 +20,74 @@ const MyWorks = () => {
           Work that shows product delivery and system thinking.
         </h2>
         <p className="mt-5 text-base leading-8 portfolio-muted sm:text-lg">
-          The mix below includes user-facing web apps and a featured inventory
-          management system that reflects my focus on architecture and problem
-          decomposition.
+          The mix below starts with ZiCraft, a live product I shipped, alongside
+          user-facing web apps and a featured inventory management system that
+          reflects my focus on architecture and problem decomposition.
         </p>
       </div>
+
+      <motion.div
+        className="portfolio-card mt-12 overflow-hidden p-6"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+          <div className="max-w-3xl">
+            <p className="text-xs uppercase tracking-[0.35em] portfolio-section-label">
+              Featured product
+            </p>
+            <h3 className="mt-3 text-3xl font-semibold text-white">
+              ZiCraft, HSK Chinese Vocabulary Learning Platform
+            </h3>
+            <p className="mt-4 portfolio-muted">
+              Live freemium product covering 5,334 official 2025 HSK words
+              across HSK 1 to 6, with 503 words free in HSK 1 to 2, flashcards,
+              spaced repetition, mistake tracking, tone practice, stories with
+              quizzes, and grammar learning.
+            </p>
+            <p className="mt-4 portfolio-muted">
+              Owned product decisions, content verification, pricing, and
+              deployment; directed and verified AI-assisted development and
+              shipped fixes for authentication, paywall, and routing.
+            </p>
+            <a
+              href="https://zicraft.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-4 inline-block font-semibold text-white underline"
+            >
+              Live: zicraft.app
+            </a>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {["Next.js", "TypeScript", "Firebase", "Live product"].map((item) => (
+              <span
+                key={item}
+                className="portfolio-pill"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            "Product decisions and pricing",
+            "Content verification",
+            "Authentication and paywall",
+            "Deployment and fixes",
+          ].map((item) => (
+            <div
+              key={item}
+              className="portfolio-card-soft px-4 py-3 text-sm portfolio-muted"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      </motion.div>
 
       <motion.div
         className="portfolio-card mt-12 overflow-hidden p-6"

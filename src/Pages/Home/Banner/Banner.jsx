@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import banner from "../../../assets/IMG-20240211-WA0025_5-removebg~2[1].png";
 
 const achievementCards = [
-  { value: "120+", label: "LeetCode" },
+  { value: "150+", label: "LeetCode" },
   { value: "330+", label: "Codeforces" },
   { value: "120+", label: "CodeChef" },
   { value: "1443 / 1157", label: "CodeChef max / Codeforces" },
@@ -65,7 +65,9 @@ const Banner = () => {
             sequence={[
               "Competitive programmer.",
               1000,
-              "C# and ASP.NET MVC builder.",
+              "Full-stack MERN and Next.js builder.",
+              1000,
+              "Shipped a live HSK learning product.",
               1000,
               "OOP, design patterns, and systems fundamentals.",
               1000,
@@ -80,9 +82,11 @@ const Banner = () => {
         <p className="mt-6 max-w-2xl text-base leading-8 portfolio-muted sm:text-lg">
           I design and build web applications with a strong focus on algorithmic
           thinking, object-oriented design, and practical system fundamentals.
-          My competitive programming routine includes 120+ LeetCode problems,
-          330+ Codeforces problems, and 120+ CodeChef problems, with a
-          CodeChef rating of 1443 max and Codeforces 1157.
+          I also shipped ZiCraft, a live freemium HSK vocabulary platform
+          covering 5,334 official 2025 HSK words. My competitive programming
+          routine includes 150+ LeetCode problems, 330+ Codeforces problems,
+          and 120+ CodeChef problems, with a CodeChef rating of 1443 max and
+          Codeforces 1157.
         </p>
         <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           {achievementCards.map((card) => (
@@ -172,13 +176,13 @@ const Banner = () => {
               </div>
               <div className="portfolio-card-soft p-4">
                 <p className="text-xs uppercase tracking-[0.35em] portfolio-section-label">
-                  System work
+                  Shipped product
                 </p>
                 <p className="mt-2 text-lg font-semibold text-white">
-                  ASP.NET MVC inventory app
+                  ZiCraft, HSK learning platform
                 </p>
                 <p className="mt-1 text-sm leading-6 portfolio-muted">
-                  C# OOP, design, data flow, and architecture practice.
+                  Live freemium product, 5,334 HSK words, Next.js and Firebase.
                 </p>
               </div>
             </div>

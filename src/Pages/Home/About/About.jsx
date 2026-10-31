@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 const engineeringHighlights = [
   {
     title: "Competitive programming",
-    value: "570+ problems",
-    detail: "120+ LeetCode, 330+ Codeforces, and 120+ CodeChef solutions.",
+    value: "600+ problems",
+    detail: "150+ LeetCode, 330+ Codeforces, and 120+ CodeChef solutions.",
   },
   {
     title: "Computer science foundations",
@@ -25,6 +25,8 @@ const studyAreas = [
   "Networking fundamentals",
   "Operating systems",
   "ASP.NET MVC architecture",
+  "TypeScript and Next.js",
+  "PostgreSQL, Firestore, and Firebase Hosting",
 ];
 
 const About = () => {
