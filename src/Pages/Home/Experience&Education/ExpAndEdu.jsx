@@ -5,12 +5,12 @@ const education = [
   {
     year: "In progress",
     degree: "Master's in Chinese Language and Culture",
-    institution: "University Of Dhaka",
+    institution: "University of Dhaka",
   },
   {
     year: "2021 - 2025",
     degree: "Bachelor of Chinese Language and Culture",
-    institution: "University Of Dhaka",
+    institution: "University of Dhaka",
   },
   {
     year: "2018 - 2020",
@@ -18,8 +18,8 @@ const education = [
     institution: "Government Safar Ali College",
   },
   {
-    year: "2005 - 2018",
-    degree: "Play Group - Secondary School Certificate",
+    year: "2016 - 2018",
+    degree: "Secondary School Certificate",
     institution: "Bishanandi Hazi Khokan High School",
   },
 ];
@@ -33,7 +33,7 @@ const engineeringMilestones = [
   {
     title: "Object-oriented programming",
     detail:
-      "Studied OOP properly in C# along with design patterns and design principles.",
+      "Studied OOP properly in C# along with design patterns and clean architecture principles.",
   },
   {
     title: "Systems fundamentals",
@@ -43,7 +43,7 @@ const engineeringMilestones = [
   {
     title: "Applied architecture",
     detail:
-      "Built an inventory management system in ASP.NET MVC architecture.",
+      "Engineered an inventory management system with layered ASP.NET MVC architecture.",
   },
 ];
 
@@ -52,15 +52,14 @@ const ExpAndEdu = () => {
     <section id="education" className="mx-auto max-w-7xl px-6 py-16 lg:py-24">
       <div className="mx-auto max-w-4xl text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.4em] portfolio-section-label">
-          Education & foundation
+          Education & Milestones
         </p>
         <h2 className="mt-4 text-4xl font-bold text-white sm:text-5xl">
           Technical depth that supports the engineering work.
         </h2>
         <p className="mt-5 text-base leading-8 text-slate-300 sm:text-lg">
-          My background combines formal education with a deliberate effort to
-          study the foundations that make software robust: data structures,
-          design, databases, networking, and operating systems.
+          My background combines formal academic discipline with an intensive, self-directed
+          mastery of software engineering foundations: algorithms, object-oriented design, databases, networking, and system design.
         </p>
       </div>
 
@@ -79,7 +78,7 @@ const ExpAndEdu = () => {
           <div className="mt-8 space-y-4">
             {education.map((item) => (
               <div
-                key={item.year}
+                key={item.degree}
                 className="rounded-2xl border border-white/10 bg-white/5 p-4"
               >
                 <p className="text-sm font-semibold portfolio-accent">{item.year}</p>
@@ -99,7 +98,7 @@ const ExpAndEdu = () => {
           transition={{ duration: 0.55 }}
         >
           <div className="flex items-center justify-center gap-3">
-            <h3 className="text-2xl font-semibold text-white">Engineering growth</h3>
+            <h3 className="text-2xl font-semibold text-white">Engineering Growth</h3>
             <FaCode className="text-3xl portfolio-accent" />
           </div>
 

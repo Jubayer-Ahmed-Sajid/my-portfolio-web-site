@@ -14,18 +14,18 @@ const engineeringHighlights = [
   {
     title: "Applied software design",
     value: "C# + ASP.NET MVC",
-    detail: "Built an inventory management system with layered architecture.",
+    detail: "Engineered an inventory management system with layered architecture.",
   },
 ];
 
 const studyAreas = [
   "Object-oriented programming in C#",
   "Design patterns and design principles",
-  "MySQL and data modeling",
-  "Networking fundamentals",
-  "Operating systems",
-  "ASP.NET MVC architecture",
-  "TypeScript and Next.js",
+  "MySQL and relational data modeling",
+  "Networking fundamentals & HTTP flows",
+  "Operating systems & process concepts",
+  "ASP.NET MVC layered architecture",
+  "TypeScript and Next.js full-stack",
   "PostgreSQL, Firestore, and Firebase Hosting",
 ];
 
@@ -46,10 +46,12 @@ const About = () => {
           Engineering profile built on problem solving.
         </h2>
         <p className="mt-5 text-base leading-8 text-slate-300 sm:text-lg">
-          I am a software engineer who enjoys turning uncertain requirements into
-          reliable software. My approach combines competitive programming, clean
-          object-oriented design, and practical system fundamentals so I can
-          reason about code, data, and architecture with the same discipline.
+          I am a software engineer driven by turning complex requirements into
+          dependable systems. My path combines academic training in linguistics at the
+          University of Dhaka with intensive self-directed computer science fundamentals:
+          competitive programming, object-oriented design in C#, and production web delivery.
+          This unique intersection inspired me to engineer ZiCraft, a live platform helping thousands
+          master Chinese vocabulary.
         </p>
       </div>
 
